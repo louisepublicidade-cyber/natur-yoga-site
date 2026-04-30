@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natur Yoga — A viagem como regulação emocional. Jornadas femininas de yoga na natureza do Paraná.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green:#00725f; --green-d:#005548; --green-l:#e6f4f1;
+      --gold:#de7607;  --gold-l:#f5a94e; --gold-d:#b85f00;
+      --white:#ffffff; --off:#faf8f5; --text:#2c2c2c; --muted:#6b6b6b;
+      --shadow:0 8px 40px rgba(0,114,95,.12);
+      --tr:.35s cubic-bezier(.4,0,.2,1);
+    }
+    html { scroll-behavior:smooth; overflow-x:hidden; }
+    body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; max-width:100vw; }
+    img  { display:block; max-width:100%; image-orientation:from-image; }
+    a    { text-decoration:none; color:inherit; }
+    ul   { list-style:none; }
+
+    .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .desktop-only { display:inline; }
+    .mobile-only { display:none; }
+    .hero__sub-mobile { display:none; }
+    .section    { padding:96px 0; }
+    .section--alt { background:var(--off); }
+
+    .tag { display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+
+    .heading-xl { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.2; color:var(--green-d); }
+    .heading-xl em { font-style:italic; color:var(--gold); }
+    .heading-lg { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3.5vw,2.6rem); line-height:1.25; color:var(--green-d); }
+    .heading-lg em { font-style:italic; color:var(--gold); }
+    .subtext { font-size:1.05rem; line-height:1.75; color:var(--muted); max-width:560px; }
+
+    /* Buttons */
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; border-radius:50px; font-family:'Poppins',sans-serif; font-size:.9rem; font-weight:600; letter-spacing:.04em; cursor:pointer; border:none; transition:var(--tr); white-space:nowrap; }
+    .btn-gold { background:linear-gradient(135deg,var(--gold-d) 0%,var(--gold) 100%); color:var(--white); box-shadow:0 6px 24px rgba(184,98,5,.5); }
+    .btn-gold:hover { background:linear-gradient(135deg,var(--gold-d) 0%,var(--gold) 100%); transform:translateY(-2px); box-shadow:0 10px 32px rgba(184,98,5,.6); }
+    .btn-outline { background:transparent; color:var(--green); border:2px solid var(--green); }
+    .btn-outline:hover { background:var(--green); color:var(--white); transform:translateY(-2px); }
+    .btn-white { background:var(--white); color:var(--green-d); box-shadow:0 6px 24px rgba(0,0,0,.18); }
+    .btn-white:hover { background:var(--green-l); transform:translateY(-2px); box-shadow:0 10px 32px rgba(0,0,0,.24); }
+
+    /* Navbar */
+    .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 24px; transition:var(--tr); }
+    .navbar.scrolled { background:rgba(255,255,255,.96); backdrop-filter:blur(12px); box-shadow:0 2px 24px rgba(0,0,0,.08); }
+    .navbar__inner { max-width:1160px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:76px; }
+    .navbar__logo { font-family:'Playfair Display',serif; font-size:1.55rem; font-weight:600; color:var(--white); transition:color var(--tr); }
+    .navbar.scrolled .navbar__logo { color:var(--green-d); }
+    .navbar__logo span { color:var(--gold); }
+    .navbar__logo-img { filter:brightness(0) invert(1); transition:filter var(--tr); border-radius:0 !important; background:transparent !important; }
+    .navbar.scrolled .navbar__logo-img { filter:none; }
+    .navbar__links { display:flex; align-items:center; gap:32px; }
+    .navbar__links a { font-size:.88rem; font-weight:500; color:rgba(255,255,255,.9); transition:color var(--tr); position:relative; }
+    .navbar__links a::after { content:''; position:absolute; bottom:-3px; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform var(--tr); }
+    .navbar__links a:hover::after { transform:scaleX(1); }
+    .navbar.scrolled .navbar__links a { color:var(--text); }
+    .navbar.scrolled .navbar__links a:hover { color:var(--green); }
+    .navbar__hamburger { display:none; background:none; border:none; cursor:pointer; }
+    .navbar__hamburger span { display:block; width:24px; height:2px; background:var(--white); margin:5px 0; transition:var(--tr); }
+    .navbar.scrolled .navbar__hamburger span { background:var(--text); }
+
+    /* Hero */
+    .hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; background:var(--green-d); }
+    .hero__video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0; }
+    .hero__bg { position:absolute; inset:0; background-image:linear-gradient(90deg, rgba(0,45,38,.95) 0%, rgba(0,45,38,.75) 45%, rgba(0,45,38,.15) 100%), url('Site%20Natur%20Yoga/Fundadoras.jpg'); background-size:cover; background-repeat:no-repeat; background-position:75% center; z-index:0; }
+    .hero::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(0,45,38,.92) 0%, rgba(0,45,38,.74) 42%, rgba(0,45,38,.34) 100%); pointer-events:none; }
+    .hero__content { position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:140px 24px 90px; text-align:left; width:100%; }
+    .hero__inner { max-width:540px; }
+    .hero__eyebrow { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.12); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.25); border-radius:50px; padding:6px 16px; font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-l); margin-bottom:28px; animation:fadeUp .8s ease both; }
+    .hero__headline { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,6vw,5rem); line-height:1.12; color:#FFFFFF; max-width:560px; text-shadow:0 2px 24px rgba(0,0,0,.35); animation:fadeUp .8s .15s ease both; }
+    .hero__headline em { font-style:italic; color:var(--gold-l); display:block; }
+    .hero__sub { font-size:1.05rem; line-height:1.8; color:rgba(255,255,255,.9); max-width:560px; margin:24px 0 40px; text-shadow:0 1px 12px rgba(0,0,0,.3); animation:fadeUp .8s .3s ease both; }
+    .hero__actions { display:flex; flex-wrap:wrap; gap:16px; justify-content:flex-start; animation:fadeUp .8s .45s ease both; }
+    .hero__stats { display:flex; flex-wrap:wrap; gap:40px; margin-top:72px; justify-content:flex-start; animation:fadeUp .8s .6s ease both; }
+    .hero__stat-item { text-align:center; }
+    .hero__stat-num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:600; color:var(--gold-l); }
+    .hero__stat-label { font-size:.78rem; color:rgba(255,255,255,.7); margin-top:4px; }
+    .hero__scroll { position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; color:rgba(255,255,255,.6); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; animation:bounce 2s infinite; }
+
+    /* Marquee */
+    .intro-strip { background:var(--green); padding:20px 0; overflow:hidden; }
+    .intro-strip__track { display:flex; gap:56px; white-space:nowrap; animation:marquee 24s linear infinite; }
+    .intro-strip__item { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.9); font-size:.82rem; font-weight:500; letter-spacing:.06em; }
+    .intro-strip__item i { color:var(--gold-l); font-size:.9rem; }
+
+    /* Awards bar */
+    .awards { background:var(--green-d); padding:28px 0; }
+    .awards__inner { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:40px; }
+    .award-item { display:flex; align-items:center; gap:12px; color:rgba(255,255,255,.85); font-size:.84rem; font-weight:500; }
+    .award-item i { color:var(--gold-l); font-size:1.3rem; }
+    .award-item strong { color:var(--white); }
+
+    /* About */
+    .about__grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+    .about__img-wrap { position:relative; }
+    .about__img-main { width:100%; height:520px; object-fit:cover; border-radius:24px; box-shadow:var(--shadow); }
+    .about__img-accent { position:absolute; bottom:-32px; right:-32px; width:200px; height:200px; object-fit:cover; border-radius:20px; border:6px solid var(--white); box-shadow:var(--shadow); }
+    .about__badge { position:absolute; top:32px; left:-24px; background:var(--gold); color:var(--white); border-radius:16px; padding:16px 20px; box-shadow:0 8px 24px rgba(222,118,7,.4); text-align:center; }
+    .about__badge-num { font-family:'Playfair Display',serif; font-size:1.9rem; font-weight:600; line-height:1; }
+    .about__badge-text { font-size:.7rem; font-weight:600; letter-spacing:.06em; margin-top:2px; }
+    .about__text { padding-left:16px; }
+    .about__features { display:flex; flex-direction:column; gap:20px; margin-top:36px; }
+    .about__feature { display:flex; align-items:flex-start; gap:16px; }
+    .about__feature-icon { flex-shrink:0; width:48px; height:48px; border-radius:14px; background:var(--green-l); display:grid; place-items:center; color:var(--green); font-size:1.1rem; }
+    .about__feature h4 { font-size:.95rem; font-weight:600; margin-bottom:4px; }
+    .about__feature p  { font-size:.85rem; color:var(--muted); line-height:1.6; }
+
+    /* Founders */
+    .founders { background:var(--off); padding:80px 0; }
+    .founders__header { text-align:center; margin-bottom:52px; }
+    .founders__grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+    .founder-card { background:var(--white); border-radius:28px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.07); display:flex; flex-direction:column; }
+    .founder-card__img { height:320px; object-fit:cover; object-position:top; width:100%; }
+    .founder-card__body { padding:32px; flex:1; }
+    .founder-card__name { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--green-d); margin-bottom:6px; }
+    .founder-card__role { font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .founder-card__bio { font-size:.9rem; color:var(--muted); line-height:1.75; }
+    .founder-card__tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+    .founder-card__tag { font-size:.72rem; font-weight:500; background:var(--green-l); color:var(--green); padding:5px 13px; border-radius:50px; }
+
+    /* Jornadas */
+    .jornadas__header { text-align:center; margin-bottom:60px; }
+    .jornadas__header .subtext { margin:16px auto 0; }
+    .jornadas__tabs { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:48px; }
+    .jornadas__tab { padding:10px 22px; border-radius:50px; font-size:.85rem; font-weight:600; border:2px solid var(--green-l); color:var(--green); background:var(--white); cursor:pointer; transition:var(--tr); }
+    .jornadas__tab.active, .jornadas__tab:hover { background:var(--green); color:var(--white); border-color:var(--green); }
+    .jornadas__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+
+    .jornada-card { background:var(--white); border-radius:24px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.08); transition:var(--tr); }
+    .jornada-card:hover { transform:translateY(-8px); box-shadow:0 20px 56px rgba(0,114,95,.18); }
+    .jornada-card__img { position:relative; height:240px; overflow:hidden; }
+    .jornada-card__img img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+    .jornada-card:hover .jornada-card__img img { transform:scale(1.07); }
+    .jornada-card__badge { position:absolute; top:14px; left:14px; font-size:.68rem; font-weight:700; letter-spacing:.07em; padding:5px 12px; border-radius:50px; color:var(--white); }
+    .badge-colheita { background:var(--gold); }
+    .badge-aventura { background:var(--green); }
+    .badge-contemp  { background:#7a5c9e; }
+    .jornada-card__loc { position:absolute; bottom:14px; left:14px; background:rgba(0,0,0,.55); backdrop-filter:blur(6px); color:var(--white); font-size:.72rem; font-weight:500; padding:4px 12px; border-radius:50px; display:flex; align-items:center; gap:6px; }
+    .jornada-card__body { padding:24px; }
+    .jornada-card__title { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--green-d); margin-bottom:8px; }
+    .jornada-card__desc { font-size:.85rem; color:var(--muted); line-height:1.7; margin-bottom:16px; }
+    .jornada-card__tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px; }
+    .jornada-card__tag { font-size:.7rem; font-weight:500; background:var(--green-l); color:var(--green); padding:3px 10px; border-radius:50px; }
+    .jornada-card__footer { display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid rgba(0,0,0,.06); }
+    .jornada-card__season { font-size:.75rem; color:var(--muted); }
+    .jornada-card__season strong { color:var(--gold); display:block; font-size:.72rem; }
+
+    /* Modalidades */
+    .modalidades { background:var(--green-d); padding:80px 0; }
+    .modalidades__header { text-align:center; margin-bottom:52px; }
+    .modalidades__header .tag { color:var(--gold-l); }
+    .modalidades__header .heading-lg { color:var(--white); }
+    .modalidades__grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+    .modalidade-card { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:28px 24px; transition:var(--tr); }
+    .modalidade-card:hover { background:rgba(255,255,255,.13); transform:translateY(-4px); }
+    .modalidade-card__icon { font-size:1.8rem; margin-bottom:16px; color:var(--gold-l); }
+    .modalidade-card__title { font-family:'Playfair Display',serif; font-size:1rem; color:var(--white); margin-bottom:8px; }
+    .modalidade-card__desc { font-size:.82rem; color:rgba(255,255,255,.65); line-height:1.65; }
+    .terapias__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:32px; }
+    .terapia-card { background:rgba(222,118,7,.12); border:1px solid rgba(222,118,7,.25); border-radius:20px; padding:24px; }
+    .terapia-card__title { font-weight:600; color:var(--gold-l); font-size:.9rem; margin-bottom:8px; }
+    .terapia-card__desc { font-size:.82rem; color:rgba(255,255,255,.65); line-height:1.65; }
+
+    /* How */
+    .how__header { text-align:center; margin-bottom:64px; }
+    .how__header .subtext { margin:16px auto 0; }
+    .how__steps { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:start; }
+    .how__step { text-align:center; padding:0 16px; }
+    .how__step-num { width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--green) 0%,var(--green-d) 100%); color:var(--white); font-family:'Playfair Display',serif; font-size:1.5rem; display:grid; place-items:center; margin:0 auto 24px; box-shadow:0 8px 24px rgba(0,114,95,.3); position:relative; }
+    .how__step-num::before { content:''; position:absolute; inset:-4px; border-radius:50%; border:2px dashed rgba(0,114,95,.25); }
+    .how__step-icon { width:52px; height:52px; display:grid; place-items:center; color:var(--white); font-size:1.2rem; margin:0 auto 20px; background:linear-gradient(135deg,var(--gold) 0%,var(--gold-l) 100%); border-radius:14px; }
+    .how__step h3 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--green-d); margin-bottom:10px; }
+    .how__step p  { font-size:.88rem; color:var(--muted); line-height:1.7; }
+    .how__arrow { padding-top:36px; color:var(--gold); font-size:1.5rem; opacity:.5; }
+
+    /* Quiz */
+    .quiz { background:linear-gradient(160deg,var(--green-d) 0%,var(--green) 60%,#008a72 100%); padding:96px 0; position:relative; overflow:hidden; }
+    .quiz::before { content:''; position:absolute; top:-100px; right:-100px; width:500px; height:500px; border-radius:50%; background:rgba(255,255,255,.04); }
+    .quiz__inner { position:relative; z-index:2; }
+    .quiz__header { text-align:center; margin-bottom:52px; }
+    .quiz__header .tag { color:var(--gold-l); }
+    .quiz__header .heading-lg { color:var(--white); }
+    .quiz__header p { color:rgba(255,255,255,.75); margin:12px auto 0; max-width:480px; font-size:.95rem; }
+    .quiz__card { background:rgba(255,255,255,.07); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.15); border-radius:28px; padding:48px; max-width:760px; margin:0 auto; }
+    .quiz__progress { display:flex; align-items:center; gap:12px; margin-bottom:36px; }
+    .quiz__progress-bar { flex:1; height:6px; background:rgba(255,255,255,.15); border-radius:50px; overflow:hidden; }
+    .quiz__progress-fill { height:100%; background:linear-gradient(90deg,var(--gold) 0%,var(--gold-l) 100%); border-radius:50px; transition:width .5s ease; }
+    .quiz__progress-text { font-size:.78rem; color:rgba(255,255,255,.6); white-space:nowrap; }
+    .quiz__question { font-family:'Playfair Display',serif; font-size:1.45rem; color:var(--white); margin-bottom:28px; line-height:1.4; }
+    .quiz__options { display:flex; flex-direction:column; gap:12px; }
+    .quiz__option { display:flex; align-items:center; gap:16px; background:rgba(255,255,255,.06); border:1.5px solid rgba(255,255,255,.12); border-radius:14px; padding:16px 20px; cursor:pointer; transition:var(--tr); color:rgba(255,255,255,.9); font-size:.92rem; }
+    .quiz__option:hover, .quiz__option.selected { background:rgba(222,118,7,.2); border-color:var(--gold); color:var(--white); }
+    .quiz__option-dot { width:20px; height:20px; border-radius:50%; border:2px solid rgba(255,255,255,.3); flex-shrink:0; transition:var(--tr); }
+    .quiz__option.selected .quiz__option-dot { background:var(--gold); border-color:var(--gold); }
+    .quiz__actions { display:flex; justify-content:space-between; align-items:center; margin-top:32px; }
+    .quiz__back { background:none; border:none; color:rgba(255,255,255,.6); font-family:'Poppins',sans-serif; font-size:.88rem; cursor:pointer; transition:color var(--tr); }
+    .quiz__back:hover { color:var(--white); }
+    .quiz__result { display:none; text-align:center; }
+    .quiz__result.active { display:block; }
+    .quiz__result-icon { width:80px; height:80px; background:linear-gradient(135deg,var(--gold) 0%,var(--gold-l) 100%); border-radius:50%; display:grid; place-items:center; font-size:2rem; margin:0 auto 24px; box-shadow:0 8px 32px rgba(222,118,7,.4); }
+    .quiz__result-type { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--white); margin-bottom:12px; }
+    .quiz__result-desc { color:rgba(255,255,255,.8); font-size:.95rem; line-height:1.7; margin-bottom:28px; max-width:480px; margin-left:auto; margin-right:auto; }
+
+    /* Testimonials */
+    .testimonials__header { text-align:center; margin-bottom:56px; }
+    .testimonials__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .testi-card { background:var(--white); border-radius:24px; padding:32px; box-shadow:0 4px 24px rgba(0,0,0,.07); transition:var(--tr); position:relative; }
+    .testi-card:hover { transform:translateY(-4px); box-shadow:0 16px 48px rgba(0,114,95,.14); }
+    .testi-card::before { content:'\201C'; position:absolute; top:16px; right:24px; font-family:'Playfair Display',serif; font-size:5rem; line-height:1; color:var(--green-l); }
+    .testi-card__stars { color:var(--gold); font-size:.85rem; margin-bottom:16px; }
+    .testi-card__text { font-size:.92rem; color:var(--muted); line-height:1.75; margin-bottom:24px; }
+    .testi-card__footer { display:flex; align-items:center; gap:14px; }
+    .testi-card__avatar { width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid var(--green-l); }
+    .testi-card__name { font-size:.9rem; font-weight:600; color:var(--green-d); }
+    .testi-card__retreat { font-size:.78rem; color:var(--gold); }
+    .testimonials__rating { display:flex; align-items:center; justify-content:center; gap:24px; margin-top:52px; padding:28px 32px; background:var(--green-l); border-radius:20px; flex-wrap:wrap; }
+    .testimonials__rating-num { font-family:'Playfair Display',serif; font-size:3rem; font-weight:600; color:var(--green-d); }
+    .testimonials__rating-stars { color:var(--gold); font-size:1.1rem; margin-bottom:4px; }
+    .testimonials__rating-label { font-size:.82rem; color:var(--muted); }
+
+    /* Gallery */
+    .gallery { display:grid; grid-template-columns:repeat(5,1fr); height:280px; overflow:hidden; }
+    .gallery__item { overflow:hidden; cursor:pointer; }
+    .gallery__item img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+    .gallery__item:hover img { transform:scale(1.1); }
+
+    /* Newsletter */
+    .final-cta { background:var(--off); padding:96px 0; position:relative; overflow:hidden; }
+    .final-cta::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(250,248,245,.55) 0%, rgba(250,248,245,.7) 100%), url('Site%20Natur%20Yoga/background.jpg') center/cover no-repeat; z-index:0; }
+    .final-cta > .container { position:relative; z-index:1; }
+    .final-cta__inner { background:rgba(255,255,255,.92); backdrop-filter:blur(8px); border:1px solid rgba(0,114,95,.12); border-radius:24px; padding:64px 48px; text-align:center; max-width:680px; margin:0 auto; box-shadow:0 12px 40px rgba(0,114,95,.12); }
+    .final-cta__inner .tag { color:var(--gold); }
+    .final-cta__inner .heading-lg { color:var(--green-d); margin:8px 0 16px; }
+    .final-cta__inner p { color:var(--muted); font-size:1rem; line-height:1.7; max-width:480px; margin:0 auto 32px; }
+    .final-cta__btn { background:#25d366 !important; color:#fff !important; box-shadow:0 6px 24px rgba(37,211,102,.35) !important; padding:16px 36px; font-size:.95rem; }
+    .final-cta__btn:hover { background:#1ebe5a !important; transform:translateY(-2px); }
+
+    /* FAQ */
+    .faq { background:var(--white); padding:96px 0; }
+    .faq__head { text-align:center; max-width:640px; margin:0 auto 48px; }
+    .faq__list { max-width:760px; margin:0 auto; }
+    .faq__item { border-bottom:1px solid rgba(0,0,0,.08); }
+    .faq__item:first-child { border-top:1px solid rgba(0,0,0,.08); }
+    .faq__q { width:100%; background:none; border:none; padding:24px 8px; display:flex; align-items:center; justify-content:space-between; gap:16px; cursor:pointer; font-family:'Poppins',sans-serif; font-size:1rem; font-weight:500; color:var(--green-d); text-align:left; transition:color var(--tr); }
+    .faq__q:hover { color:var(--green); }
+    .faq__q i { color:var(--gold); font-size:.9rem; transition:transform var(--tr); flex-shrink:0; }
+    .faq__item.open .faq__q i { transform:rotate(180deg); }
+    .faq__a { max-height:0; overflow:hidden; transition:max-height .35s ease, padding .35s ease; padding:0 8px; color:var(--muted); font-size:.92rem; line-height:1.7; }
+    .faq__item.open .faq__a { max-height:300px; padding:0 8px 24px; }
+
+    /* Read more / Ler mais (mobile expand) */
+    .bio__rest, .readmore__rest { display:inline; }
+    .bio__toggle, .readmore__toggle { display:none; background:none; border:none; padding:8px 0; margin-top:6px; color:var(--gold); font-family:'Poppins',sans-serif; font-size:.85rem; font-weight:600; letter-spacing:.02em; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+    .bio__toggle:hover, .readmore__toggle:hover { color:var(--green-d); }
+
+    /* Footer */
+    footer { background:var(--green-d); color:rgba(255,255,255,.8); padding:72px 0 32px; }
+    .footer__grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:48px; margin-bottom:56px; }
+    .footer__brand p { font-size:.88rem; line-height:1.7; color:rgba(255,255,255,.65); margin:16px 0 24px; }
+    .footer__social { display:flex; gap:12px; }
+    .footer__social a { width:40px; height:40px; border-radius:50%; border:1.5px solid rgba(255,255,255,.2); display:grid; place-items:center; color:rgba(255,255,255,.7); font-size:.9rem; transition:var(--tr); }
+    .footer__social a:hover { background:var(--gold); border-color:var(--gold); color:var(--white); transform:translateY(-2px); }
+    .footer__col h4 { font-size:.82rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-l); margin-bottom:20px; }
+    .footer__col ul { display:flex; flex-direction:column; gap:10px; }
+    .footer__col ul li a { font-size:.88rem; color:rgba(255,255,255,.65); transition:color var(--tr); }
+    .footer__col ul li a:hover { color:var(--white); }
+    .footer__contact { display:flex; flex-direction:column; gap:14px; }
+    .footer__contact-item { display:flex; align-items:flex-start; gap:12px; }
+    .footer__contact-item i { color:var(--gold-l); font-size:.9rem; margin-top:2px; }
+    .footer__contact-item span { font-size:.86rem; color:rgba(255,255,255,.65); line-height:1.6; }
+    .footer__bottom { border-top:1px solid rgba(255,255,255,.1); padding-top:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+    .footer__bottom p { font-size:.8rem; color:rgba(255,255,255,.45); }
+    .footer__bottom-links { display:flex; gap:24px; }
+    .footer__bottom-links a { font-size:.8rem; color:rgba(255,255,255,.45); transition:color var(--tr); }
+    .footer__bottom-links a:hover { color:rgba(255,255,255,.8); }
+
+    .wa-btn { position:fixed; bottom:32px; right:32px; z-index:900; width:58px; height:58px; background:#25d366; border-radius:50%; display:grid; place-items:center; color:var(--white); font-size:1.5rem; box-shadow:0 8px 24px rgba(37,211,102,.4); transition:var(--tr); }
+    .wa-btn:hover { transform:scale(1.1); }
+
+    /* Animations */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .reveal { opacity:0; transform:translateY(40px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* Responsive */
+    @media(max-width:1024px){
+      .jornadas__grid { grid-template-columns:repeat(2,1fr); }
+      .testimonials__grid { grid-template-columns:repeat(2,1fr); }
+      .footer__grid { grid-template-columns:1fr 1fr; }
+      .about__grid { gap:40px; }
+      .modalidades__grid { grid-template-columns:repeat(2,1fr); }
+      .founders__grid { grid-template-columns:1fr 1fr; }
+      .terapias__grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:768px){
+      .section { padding:64px 0; }
+      html, body { overflow-x:hidden; }
+      .navbar__links { display:none; position:absolute; top:100%; left:0; right:0; background:var(--white); flex-direction:column; align-items:flex-start; gap:0; padding:16px 24px; box-shadow:0 12px 30px rgba(0,0,0,.12); }
+      .navbar__links.open { display:flex; }
+      .navbar__links a { color:var(--text) !important; padding:12px 0; width:100%; border-bottom:1px solid rgba(0,0,0,.06); }
+      .navbar__links a::after { display:none; }
+      .navbar__hamburger { display:block; }
+      .navbar__cta { display:none; }
+      .navbar__logo-img { height:50px !important; }
+      .hero { min-height:100svh; align-items:flex-start; }
+      .hero::before { background:linear-gradient(180deg, rgba(0,45,38,.65) 0%, rgba(0,45,38,.45) 100%); }
+      .hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:80px; background:linear-gradient(180deg, transparent 0%, rgba(0,45,38,.4) 100%); z-index:1; pointer-events:none; }
+      .hero__video { object-position:center 30%; }
+      .hero__content { text-align:center; padding:96px 20px 64px; }
+      .hero__inner { max-width:100%; margin-left:auto; margin-right:auto; }
+      .hero__eyebrow, .hero__sub, .hero__sub-mobile { display:none !important; }
+      .hero__actions { display:flex !important; justify-content:center; margin-top:32px; }
+      .hero__actions .btn-gold { width:min(100%,300px); min-height:56px; padding:14px 28px; border-radius:999px; justify-content:center; font-size:.95rem; }
+      .hero__actions .btn-white { display:none !important; }
+      .hero__headline { font-size:clamp(2.3rem,8.5vw,3.2rem); line-height:1.05; max-width:320px; margin:0 auto; text-align:center; }
+      .hero__stats { display:grid !important; grid-template-columns:repeat(3,1fr); gap:14px; max-width:340px; margin:20px auto 0; justify-items:center; text-align:center; }
+      .hero__stat-item { min-width:0; text-align:center; }
+      .hero__stat-num { font-size:1.7rem; line-height:1; }
+      .hero__stat-label { font-size:.8rem; margin-top:6px; opacity:0.9; line-height:1.3; }
+      .hero__scroll { bottom:24px; font-size:.62rem; padding-bottom:env(safe-area-inset-bottom,0); }
+      .desktop-only { display:none !important; }
+      .mobile-only { display:inline !important; }
+      .hero__actions { justify-content:center; }
+      .hero__stats { justify-content:center; }
+      .about__grid { grid-template-columns:1fr; }
+      .about__img-main { height:360px; object-fit:cover; object-position:center; }
+      .about__img-accent { display:none !important; }
+      .about__badge { display:none !important; }
+      .about__text { padding-left:0; }
+      .founder-card__bio.collapsed .bio__rest { display:none; }
+      .bio__toggle { display:inline-block !important; }
+      .readmore.collapsed .readmore__rest { display:none; }
+      .readmore__toggle { display:inline-block !important; }
+      .jornadas__grid { grid-template-columns:1fr; }
+      .founders__grid { grid-template-columns:1fr; }
+      .how__steps { grid-template-columns:1fr; gap:40px; }
+      .how__arrow { display:none; }
+      .testimonials__grid { grid-template-columns:1fr; }
+      .gallery { grid-template-columns:repeat(3,1fr); height:200px; }
+      .gallery__item:nth-child(4),.gallery__item:nth-child(5) { display:none; }
+      .final-cta { padding:56px 18px !important; }
+      .final-cta::before { background:linear-gradient(180deg, rgba(0,45,38,.25) 0%, rgba(0,45,38,.35) 100%), url('Site%20Natur%20Yoga/background.jpg') center/cover no-repeat !important; }
+      .final-cta__inner { padding:38px 22px !important; background:rgba(255,255,255,.94) !important; backdrop-filter:blur(8px) !important; border:1px solid rgba(0,114,95,.12) !important; border-radius:24px !important; box-shadow:0 12px 40px rgba(0,0,0,.12) !important; max-width:100% !important; }
+      .footer__grid { grid-template-columns:1fr; gap:32px; }
+      .footer__logo-img { height:88px !important; margin:0 auto 8px !important; display:block !important; }
+      .footer__brand { text-align:center; }
+      .footer__social { justify-content:center; }
+      .footer__bottom { flex-direction:column; text-align:center; }
+      .quiz__card { padding:32px 24px; }
+      .terapias__grid { grid-template-columns:1fr; }
+      .modalidades__grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:480px){
+      .container { padding:0 18px; }
+      .hero__actions { flex-direction:column; align-items:center; }
+      .hero__actions .btn-gold { width:100%; max-width:280px; }
+      .modalidades__grid { grid-template-columns:1fr; }
+      .about__img-main { height:300px; }
+      .hero__stats { gap:20px; margin-top:48px; }
+      .hero__stat-num { font-size:1.6rem; }
+      .heading-xl { font-size:clamp(1.8rem,8vw,2.4rem); }
+      .heading-lg { font-size:clamp(1.4rem,6vw,2rem); }
+      .seals-grid { gap:32px !important; }
+      .seals-grid img { height:100px !important; }
+      .final-cta__inner { padding:40px 20px; }
+      .jornada-card__body { padding:20px; }
+      .testi-card { padding:24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#" class="navbar__logo" style="display:flex;align-items:center;gap:10px;">
+      <img src="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png" alt="Natur Yoga" style="height:64px;width:auto;border-radius:8px;display:block;" class="navbar__logo-img" />
+    </a>
+    <ul class="navbar__links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#jornadas">Jornadas</a></li>
+      <li><a href="#como-funciona">Como Funciona</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#depoimentos">O que elas dizem</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="javascript:void(0)" onclick="openWhatsAppGeneral()" class="btn btn-gold navbar__cta">Reservar Experiência</a>
+      <button class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="Site%20Natur%20Yoga/Fundadoras.jpg">
+    <source src="Site%20Natur%20Yoga/video/naturyogacapa-720.mp4" type="video/mp4" />
+  </video>
+  <div class="hero__bg" aria-hidden="true" style="display:none;"></div>
+  <div class="hero__content">
+    <div class="hero__inner">
+    <div class="hero__eyebrow">
+      <i class="fas fa-leaf"></i>
+      Ecoturismo e Autoconhecimento para mulheres
+    </div>
+    <h1 class="hero__headline">Turismo e Yoga<br><em>na natureza.</em></h1>
+    <p class="hero__sub">
+      Jornadas e imersões só para mulheres, no Sul do Brasil.
+    </p>
+    <p class="hero__sub-mobile mobile-only">Jornadas e imersões só para mulheres</p>
+    <div class="hero__actions">
+      <a href="#jornadas" class="btn btn-gold"><i class="fas fa-compass"></i>Ver Jornadas</a>
+      <a href="#quiz" class="btn btn-white"><i class="fas fa-sparkles"></i>Descobrir Minha Viagem</a>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat-item">
+        <div class="hero__stat-num">800+</div>
+        <div class="hero__stat-label">Mulheres viajantes</div>
+      </div>
+      <div class="hero__stat-item">
+        <div class="hero__stat-num">5 anos</div>
+        <div class="hero__stat-label">Guiando jornadas</div>
+      </div>
+      <div class="hero__stat-item">
+        <div class="hero__stat-num">12+</div>
+        <div class="hero__stat-label">Destinos no Brasil</div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="hero__scroll"><span>Desacelere</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="intro-strip">
+  <div class="intro-strip__track">
+    <div class="intro-strip__item"><i class="fas fa-venus"></i> Só para mulheres</div>
+    <div class="intro-strip__item"><i class="fas fa-spa"></i> Yoga restaurativo</div>
+    <div class="intro-strip__item"><i class="fas fa-om"></i> Meditações guiadas</div>
+    <div class="intro-strip__item"><i class="fas fa-utensils"></i> Gastronomia local</div>
+    <div class="intro-strip__item"><i class="fas fa-leaf"></i> Turismo consciente</div>
+    <div class="intro-strip__item"><i class="fas fa-venus"></i> Só para mulheres</div>
+    <div class="intro-strip__item"><i class="fas fa-spa"></i> Yoga restaurativo</div>
+    <div class="intro-strip__item"><i class="fas fa-om"></i> Meditações guiadas</div>
+    <div class="intro-strip__item"><i class="fas fa-utensils"></i> Gastronomia local</div>
+    <div class="intro-strip__item"><i class="fas fa-leaf"></i> Turismo consciente</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__img-wrap reveal">
+        <img class="about__img-main" src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga com passeio de trem em Morretes, Serra do Mar" style="object-position:center;" />
+        <img class="about__img-accent" src="Site%20Natur%20Yoga/Imers%C3%A3o%20em%20Piramides%20Sagradas.jpg" alt="Louise e Fran nas Pirâmides Sagradas" style="object-position:center;" />
+        <div class="about__badge">
+          <div class="about__badge-num">800+</div>
+          <div class="about__badge-text">Mulheres<br>Viajantes</div>
+        </div>
+      </div>
+      <div class="about__text reveal">
+        <span class="tag">Sobre</span>
+        <h2 class="heading-lg">De mulher para mulher, <em>em conexão com a natureza.</em></h2>
+        <p class="subtext" style="margin-top:16px;">
+          A Natur Yoga nasceu em Campo Largo, no Sul do Brasil, criando experiências de yoga e ecoturismo pensadas exclusivamente para mulheres em meio à natureza.
+        </p>
+        <p class="subtext" style="margin-top:14px;font-style:italic;color:var(--green-d);">
+          Um convite para desacelerar, respirar e voltar a se sentir presente.
+        </p>
+        <div class="about__features">
+          <div class="about__feature">
+            <div class="about__feature-icon"><i class="fas fa-venus"></i></div>
+            <div><h4>Só para mulheres</h4><p>Jornadas criadas para mulheres que desejam pausar, respirar e viver momentos de conexão na natureza.</p></div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div><h4>Curadoria dos roteiros</h4><p>Cada roteiro é escolhido com cuidado, considerando a natureza, o ritmo do grupo e a experiência como um todo.</p></div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon"><i class="fas fa-seedling"></i></div>
+            <div><h4>Turismo regenerativo</h4><p>Buscamos cuidar do meio ambiente e movimentar a economia local em cada experiência.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders" id="fundadoras">
+  <div class="container">
+    <div class="founders__header reveal">
+      <span class="tag">As Fundadoras</span>
+      <h2 class="heading-xl">De mulher <em>para mulher</em></h2>
+    </div>
+    <div class="founders__grid">
+      <div class="founder-card reveal">
+        <img class="founder-card__img" src="Site%20Natur%20Yoga/Louise%20Schroeder.JPG" alt="Louise Schroeder" style="object-position:top;" />
+        <div class="founder-card__body">
+          <div class="founder-card__name">Louise Schroeder</div>
+          <div class="founder-card__role">Idealizadora · Professora de Yoga · Terapeuta Integrativa</div>
+          <p class="founder-card__bio collapsed">
+            <span class="bio__short">O Yoga se revelou para mim como um caminho profundo e amoroso, trazendo-me de volta ao presente e à minha essência.</span><span class="bio__rest"><br><br>Com quase 10 anos de prática, me especializei também em Yoga Restaurativo e mergulhei nas práticas contemplativas e Terapias Integrativas como Reiki, Aromaterapia e oráculos.<br><br>Para mim, o Yoga é mais do que uma prática — é um estilo de vida que vivo intensamente. Estou aqui para compartilhar essa jornada com você, oferecendo experiências que conectam corpo, mente e alma, sempre em harmonia com a natureza.</span>
+          </p>
+          <button type="button" class="bio__toggle mobile-only" onclick="toggleBio(this)" aria-expanded="false">Ler mais</button>
+          <div class="founder-card__tags">
+            <span class="founder-card__tag">Praticante há 10 anos</span>
+            <span class="founder-card__tag">Instrutora desde 2019</span>
+            <span class="founder-card__tag">Terapeuta Integrativa</span>
+          </div>
+        </div>
+      </div>
+      <div class="founder-card reveal">
+        <img class="founder-card__img" src="Site%20Natur%20Yoga/Francieli.png" alt="Francieli Biernaski, co-fundadora da Natur Yoga, no Pico Paraná" style="object-position:center 20%;" />
+        <div class="founder-card__body">
+          <div class="founder-card__name">Francieli Biernaski</div>
+          <div class="founder-card__role">Co-fundadora · Engenheira Agrônoma · Guia de Turismo</div>
+          <p class="founder-card__bio collapsed">
+            <span class="bio__short">Sou a Fran, Engenheira Agrônoma e Guia de Turismo. Sempre tive uma relação muito próxima com a natureza, trilhas, acampamentos e estar ao ar livre fazem parte da minha vida.</span><span class="bio__rest"><br><br>Na Natur Yoga, eu cuido dos roteiros e da organização de cada jornada. Gosto de pensar em tudo com calma: escolher bem os lugares, entender o ritmo do grupo e garantir que cada experiência aconteça com segurança e leveza.<br><br>Acredito muito que viajar pode ser um jeito simples de se reconectar, com a natureza, com o corpo e também com outras mulheres que estão vivendo o mesmo momento que você.</span>
+          </p>
+          <button type="button" class="bio__toggle mobile-only" onclick="toggleBio(this)" aria-expanded="false">Ler mais</button>
+          <div class="founder-card__tags">
+            <span class="founder-card__tag">Engenharia Agronômica</span>
+            <span class="founder-card__tag">Guia de Turismo</span>
+            <span class="founder-card__tag">Trilhas</span>
+            <span class="founder-card__tag">Ecoturismo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JORNADAS -->
+<section class="section" id="jornadas">
+  <div class="container">
+    <div class="jornadas__header reveal">
+      <span class="tag">Nossas jornadas de yoga na natureza</span>
+      <h2 class="heading-xl">Viaje no <em>ritmo da sua alma</em></h2>
+    </div>
+
+    <div class="jornadas__tabs" id="tabsContainer">
+      <button class="jornadas__tab active" onclick="filterJornadas('todas', this)">Todas</button>
+      <button class="jornadas__tab" onclick="filterJornadas('colheita', this)">Gastronomia &amp; Colheita</button>
+      <button class="jornadas__tab" onclick="filterJornadas('flores', this)">Colheita de Flores</button>
+      <button class="jornadas__tab" onclick="filterJornadas('aventura', this)">Aventura</button>
+      <button class="jornadas__tab" onclick="filterJornadas('contemp', this)">Contemplativo</button>
+      <button class="jornadas__tab" onclick="filterJornadas('manual', this)">Experiência Manual</button>
+    </div>
+
+    <div class="jornadas__grid" id="jornadasGrid">
+
+      <!-- Gastronomia & Colheita -->
+      <div class="jornada-card reveal" data-cat="colheita">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/guajuvira.jpg" alt="Yoga + Colheita em Guajuvira, Araucária" />
+          <span class="jornada-card__badge badge-colheita">Gastronomia</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Araucária</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Colheita em Guajuvira</h3>
+          <p class="jornada-card__desc">Colheita de morangos e uvas, prática de yoga no campo com café colonial de herança polonesa e ucraniana.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Morangos</span>
+            <span class="jornada-card__tag">Uvas</span>
+            <span class="jornada-card__tag">Café Colonial</span>
+            <span class="jornada-card__tag">Cultura Polonesa</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Datas pontuais</strong>Araucária</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="colheita">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Yoga%20%2B%20Colheita%20de%20Kiwi%20%26%20Mirtilos.jpg" alt="Yoga + Colheita de Mirtilos" />
+          <span class="jornada-card__badge badge-colheita">Gastronomia</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Balsa Nova · 50km de Curitiba</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Colheita de Mirtilos</h3>
+          <p class="jornada-card__desc">Chácara em São Luiz do Puruna. Tour guiado pelo pomar, colheita participativa de mirtilos e yoga em meio à paisagem serrana. Uma jornada no ritmo da terra, com tempo para colher, respirar e estar presente.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Mirtilos</span>
+            <span class="jornada-card__tag">Degustação</span>
+            <span class="jornada-card__tag">Yoga ao Ar Livre</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Mar–Mai e Set–Nov</strong>Colheita</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="colheita">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Yoga%20%2B%20Gastronomia%20Polonesa.jpg" alt="Yoga + Gastronomia Polonesa" />
+          <span class="jornada-card__badge badge-colheita">Gastronomia</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Gastronomia Polonesa</h3>
+          <p class="jornada-card__desc">Campo Ila, Colônia Figueiredo, Campo Largo. Café da colônia ao ar livre, receitas polonesas tradicionais e yoga em meio à natureza da região, valorizando os sabores e a história local.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Culinária Polonesa</span>
+            <span class="jornada-card__tag">Café Colonial</span>
+            <span class="jornada-card__tag">Campo Largo</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Colônia Figueiredo</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flores -->
+      <div class="jornada-card reveal" data-cat="flores">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga + Campos de Camomila" />
+          <span class="jornada-card__badge" style="background:#a0785a;">Flores</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Mandirituba / São José dos Pinhais</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Campos de Camomila</h3>
+          <p class="jornada-card__desc">Campos de camomila entre Mandirituba e São José dos Pinhais. Circuito Caminho das Camomilas e gastronomia local. O aroma suave da flor acompanha a prática de yoga entre os campos, em uma experiência de tranquilidade e presença.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Caminho das Camomilas</span>
+            <span class="jornada-card__tag">Gastronomia Local</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ago–Set</strong>Florada máxima</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="flores">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/lavanda.jpg" alt="Yoga em campo de lavanda, Recanto das Lavandas em Araucária" />
+          <span class="jornada-card__badge" style="background:#7a5c9e;">Flores</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Araucária</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Campos de Lavanda</h3>
+          <p class="jornada-card__desc">Recanto das Lavandas, Araucária. Trilha em bosque de araucárias nativas e yoga entre os campos em florada. O aroma da lavanda acompanha a prática ao ar livre, trazendo leveza e relaxamento.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Lavanda</span>
+            <span class="jornada-card__tag">Araucárias</span>
+            <span class="jornada-card__tag">Yoga ao Ar Livre</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Nov–Jan</strong>Florada principal</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aventura -->
+      <div class="jornada-card reveal" data-cat="aventura">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga + Morro do Cal" />
+          <span class="jornada-card__badge badge-aventura">Aventura</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo · 30min de Curitiba</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Morro do Cal</h3>
+          <p class="jornada-card__desc">1.120 m de altitude, trilha de nível iniciante. No cume, vista de toda a região metropolitana de Curitiba. Yoga ao pôr do sol, com a luz dourada da tarde sobre o vale.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">1.120m altitude</span>
+            <span class="jornada-card__tag">Vista 360°</span>
+            <span class="jornada-card__tag">Nível Iniciante</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Temporada de montanhas</strong>Abr–Set</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="aventura">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Yoga%20Canion%20da%20Faxina.jpeg" alt="Yoga + Cânion da Faxina" style="image-orientation:from-image;" />
+          <span class="jornada-card__badge badge-aventura">Aventura</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> São Luiz do Puruna</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Cânion da Faxina</h3>
+          <p class="jornada-card__desc">Paredões da Escarpa Devoniana, com trilha de trechos íngremes e mirantes sobre o vale. Yoga em meio à paisagem rochosa, com tempo para silêncio e contemplação. Temporada de montanhas (abril a setembro).</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Cânion</span>
+            <span class="jornada-card__tag">Mirantes</span>
+            <span class="jornada-card__tag">Escarpa Devoniana</span>
+            <span class="jornada-card__tag">Nível Médio</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Temporada de montanhas</strong>Abr–Set</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contemplativo -->
+      <div class="jornada-card reveal" data-cat="contemp">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga + Trem para Morretes" />
+          <span class="jornada-card__badge badge-contemp">Contemplativo</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Morretes</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Trem para Morretes</h3>
+          <p class="jornada-card__desc">Yoga em meio à Mata Atlântica, cercada pelo som do rio e pela natureza da Serra do Mar. Passeio de trem pela Serra do Mar, yoga no Santuário Nhundiaquara e gastronomia regional em Morretes.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Serra do Mar</span>
+            <span class="jornada-card__tag">Mata Atlântica</span>
+            <span class="jornada-card__tag">Santuário Nhundiaquara</span>
+            <span class="jornada-card__tag">Gastronomia</span>
+            <span class="jornada-card__tag"><i class="fas fa-shuttle-van"></i> Transporte de van</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Morretes, PR</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="contemp">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Yoga + Buraco do Padre" />
+          <span class="jornada-card__badge badge-contemp">Contemplativo</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Ponta Grossa</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga + Buraco do Padre</h3>
+          <p class="jornada-card__desc">Yoga no jardim do parque, cercada pela natureza característica dos Campos Gerais. Buraco do Padre: formações rochosas, furnas e cachoeira dentro de caverna.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Furnas</span>
+            <span class="jornada-card__tag">Cachoeira</span>
+            <span class="jornada-card__tag">Contemplativo</span>
+            <span class="jornada-card__tag">Campos Gerais</span>
+            <span class="jornada-card__tag"><i class="fas fa-shuttle-van"></i> Transporte de van</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Ponta Grossa, PR</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="contemp">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Imers%C3%A3o%20em%20Piramides%20Sagradas.jpg" alt="Imersão Pirâmides Sagradas — Grão-Pará, SC" />
+          <span class="jornada-card__badge badge-contemp">Imersão</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Grão-Pará, SC</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Imersão Pirâmides Sagradas</h3>
+          <p class="jornada-card__desc">Imersão de dois dias na Pousada das Pirâmides, em Grão-Pará, Santa Catarina. Yoga, práticas terapêuticas, hospedagem, gastronomia local e tempo para contemplar as formações montanhosas da Serra Furada.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">2 dias</span>
+            <span class="jornada-card__tag">Hospedagem</span>
+            <span class="jornada-card__tag">Yoga</span>
+            <span class="jornada-card__tag">Práticas terapêuticas</span>
+            <span class="jornada-card__tag">Gastronomia local</span>
+            <span class="jornada-card__tag"><i class="fas fa-shuttle-van"></i> Transporte de van</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Datas pontuais</strong>Serra Furada, SC</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manual -->
+      <div class="jornada-card reveal" data-cat="manual">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica — Estúdio Boitatá" />
+          <span class="jornada-card__badge" style="background:#c0642a;">Manual</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga e Cerâmica | Estúdio Boitatá</h3>
+          <p class="jornada-card__desc">Ateliê autoral na Colônia Figueiredo, fundado por Danielle Carazzai e Rodrigo Ramirez. Modelagem em argila e yoga, dois caminhos manuais que convidam à presença e ao ritmo lento.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Cerâmica</span>
+            <span class="jornada-card__tag">Arte Manual</span>
+            <span class="jornada-card__tag">Argila</span>
+            <span class="jornada-card__tag">Campo Largo</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Colônia Figueiredo</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="manual">
+        <div class="jornada-card__img">
+          <img src="Site%20Natur%20Yoga/chaua.jpg" alt="Yoga e Plantio de Mudas Nativas no Viveiro Chauá" />
+          <span class="jornada-card__badge" style="background:#3a7d44;">Manual</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title">Yoga e Plantio de Mudas Nativas | Sociedade Chauá</h3>
+          <p class="jornada-card__desc">Viveiro Chauá, referência em conservação da Floresta com Araucária: cerca de 70 mil mudas/ano de mais de 200 espécies nativas. Plantio participativo combinado com yoga contemplativo — turismo regenerativo na prática.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Araucária</span>
+            <span class="jornada-card__tag">70k mudas/ano</span>
+            <span class="jornada-card__tag">Conservação</span>
+            <span class="jornada-card__tag">200+ espécies</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Viveiro Chauá, PR</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODALIDADES -->
+<section class="modalidades">
+  <div class="container">
+    <div class="modalidades__header reveal">
+      <span class="tag">Práticas &amp; Terapias</span>
+      <h2 class="heading-lg">Práticas para <em>corpo e mente</em></h2>
+      <p class="subtext" style="margin-top:24px;text-align:center;color:#fff;max-width:680px;margin-left:auto;margin-right:auto;">Cada jornada combina diferentes práticas para nutrir corpo, mente e emoções.</p>
+    </div>
+    <div class="modalidades__grid reveal">
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-spa"></i></div>
+        <div class="modalidade-card__title">Hatha Yoga</div>
+        <div class="modalidade-card__desc">Uma prática com posturas, respiração e permanência, conduzida em um ritmo tranquilo para preparar o corpo e trazer presença.</div>
+      </div>
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-wind"></i></div>
+        <div class="modalidade-card__title">Vinyasa Flow</div>
+        <div class="modalidade-card__desc">Uma prática mais fluida, em que movimento e respiração caminham juntos, criando uma sequência leve, consciente e energizante.</div>
+      </div>
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-moon"></i></div>
+        <div class="modalidade-card__title">Yoga Restaurativo</div>
+        <div class="modalidade-card__desc">Uma prática suave e acolhedora, com posturas confortáveis e tempo para o corpo relaxar profundamente.</div>
+      </div>
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-leaf"></i></div>
+        <div class="modalidade-card__title">Meditação na Natureza</div>
+        <div class="modalidade-card__desc">Práticas guiadas ao ar livre para respirar melhor, observar a paisagem, silenciar por alguns instantes e voltar ao momento presente.</div>
+      </div>
+    </div>
+    <div class="modalidades__header reveal" style="margin-top:64px;">
+      <h3 class="heading-lg" style="font-size:1.8rem;">Práticas <em>terapêuticas</em></h3>
+    </div>
+    <div class="terapias__grid reveal">
+      <div class="terapia-card">
+        <div class="terapia-card__icon" style="font-size:1.6rem;color:var(--gold-l);margin-bottom:12px;"><i class="fas fa-hands"></i></div>
+        <div class="terapia-card__title">Reiki Coletivo</div>
+        <div class="terapia-card__desc">Para energizar e promover bem-estar.</div>
+      </div>
+      <div class="terapia-card">
+        <div class="terapia-card__icon" style="font-size:1.6rem;color:var(--gold-l);margin-bottom:12px;"><i class="fas fa-clone"></i></div>
+        <div class="terapia-card__title">Cartas Terapêuticas</div>
+        <div class="terapia-card__desc">Para uma jornada de reflexão e crescimento.</div>
+      </div>
+      <div class="terapia-card">
+        <div class="terapia-card__icon" style="font-size:1.6rem;color:var(--gold-l);margin-bottom:12px;"><i class="fas fa-seedling"></i></div>
+        <div class="terapia-card__title">Aromaterapia</div>
+        <div class="terapia-card__desc">Para nutrir o corpo, equilibrar as emoções e florescer em harmonia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="how__header reveal">
+      <span class="tag">Processo Simples</span>
+      <h2 class="heading-xl">Como <em>funciona</em></h2>
+      <p class="subtext">Acompanhamos você em cada etapa, da primeira mensagem até a sua volta para casa.</p>
+    </div>
+    <div class="how__steps reveal">
+      <div class="how__step">
+        <div class="how__step-num">1</div>
+        <h3>Descubra Sua Jornada</h3>
+        <p>Faça nosso quiz e encontre o circuito que ressoa com o que você mais precisa. Cada jornada é única: colheita, flores, aventura, contemplação ou experiência manual.</p>
+      </div>
+      <div class="how__arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="how__step">
+        <div class="how__step-num">2</div>
+        <h3>Reserve Sua Vaga</h3>
+        <p>Grupos pequenos e exclusivos para mulheres. Após a reserva, você recebe um guia de preparação e suporte direto com Louise ou Fran. Reservas conforme disponibilidade de cada roteiro.</p>
+      </div>
+      <div class="how__arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="how__step">
+        <div class="how__step-num">3</div>
+        <h3>Viva a Sua Jornada Interior</h3>
+        <p>Yoga, terapias integrativas, natureza e a companhia de mulheres que estão no mesmo caminho que o seu. Volte para casa com mais de você mesma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+  <div class="container quiz__inner">
+    <div class="quiz__header reveal">
+      <span class="tag">Autoconhecimento</span>
+      <h2 class="heading-lg">Que tipo de aventureira <em>você é?</em></h2>
+      <p>3 perguntas rápidas para encontrar a jornada Natur Yoga feita para você.</p>
+    </div>
+    <div class="quiz__card reveal" id="quizCard">
+      <div class="quiz__progress">
+        <div class="quiz__progress-bar"><div class="quiz__progress-fill" id="quizProgress" style="width:33%"></div></div>
+        <span class="quiz__progress-text" id="quizStep">Pergunta 1 de 3</span>
+      </div>
+      <div id="quizQuestions">
+        <div class="quiz__q" id="q1">
+          <p class="quiz__question">Como você gosta de passar um dia ao ar livre?</p>
+          <div class="quiz__options">
+            <div class="quiz__option" data-q="1" data-v="colheita" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Colher frutas, provar sabores novos e sentar em um café colonial ao ar livre</span></div>
+            <div class="quiz__option" data-q="1" data-v="aventura" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Subir uma trilha íngreme e chegar em um mirante com vista de 360°</span></div>
+            <div class="quiz__option" data-q="1" data-v="contemp" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Meditar em silêncio à beira de uma cachoeira ou entre formações rochosas</span></div>
+          </div>
+          <div class="quiz__actions"><span></span><button class="btn btn-gold" onclick="nextQ(2)" id="next1" style="display:none">Próxima <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+        <div class="quiz__q" id="q2" style="display:none">
+          <p class="quiz__question">Qual dessas experiências mais combina com você?</p>
+          <div class="quiz__options">
+            <div class="quiz__option" data-q="2" data-v="colheita" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Yoga entre campos de lavanda ou camomila com cheiro de flor no ar</span></div>
+            <div class="quiz__option" data-q="2" data-v="aventura" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Yoga no topo do Morro do Cal ao pôr do sol</span></div>
+            <div class="quiz__option" data-q="2" data-v="contemp" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Passeio de trem pela Serra do Mar e yoga no Santuário Nhundiaquara</span></div>
+          </div>
+          <div class="quiz__actions"><button class="quiz__back" onclick="prevQ(1)"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-gold" onclick="nextQ(3)" id="next2" style="display:none">Próxima <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+        <div class="quiz__q" id="q3" style="display:none">
+          <p class="quiz__question">O que você quer carregar na mochila de volta para casa?</p>
+          <div class="quiz__options">
+            <div class="quiz__option" data-q="3" data-v="colheita" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Uma nova relação com a comida, a terra e o ritmo das estações</span></div>
+            <div class="quiz__option" data-q="3" data-v="aventura" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>A sensação de poder no corpo e coragem para os próximos desafios</span></div>
+            <div class="quiz__option" data-q="3" data-v="contemp" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Clareza mental, equilíbrio e reconexão com o meu propósito de vida</span></div>
+          </div>
+          <div class="quiz__actions"><button class="quiz__back" onclick="prevQ(2)"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-gold" onclick="showResult()" id="next3" style="display:none">Ver Resultado <i class="fas fa-sparkles"></i></button></div>
+        </div>
+      </div>
+      <div class="quiz__result" id="quizResult">
+        <div class="quiz__result-icon" id="resultIcon">🌿</div>
+        <h3 class="quiz__result-type" id="resultType">Você é a Aventureira da Terra</h3>
+        <p class="quiz__result-desc" id="resultDesc">Sua jornada ideal está esperando por você na Natur Yoga.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(document.getElementById('resultType').textContent || 'Quiz Natur Yoga')" class="btn btn-gold">Reservar Esta Jornada</a>
+          <button class="btn" style="background:rgba(255,255,255,.15);color:white;border:1.5px solid rgba(255,255,255,.3);" onclick="resetQuiz()">Refazer Quiz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section--alt" id="depoimentos">
+  <div class="container">
+    <div class="testimonials__header reveal">
+      <span class="tag">Das Nossas Aventureiras</span>
+      <h2 class="heading-xl">O que dizem as mulheres <em>que viveram</em></h2>
+    </div>
+    <div class="testimonials__grid">
+      <div class="testi-card reveal">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__text">"A Jornada foi tão intensa e incrível que estou assimilando ainda. Agradeço por cada momento de sabedoria, troca e carinho."</p>
+        <div class="testi-card__footer">
+          <div class="testi-card__avatar" aria-label="Josiane" style="display:grid;place-items:center;background:var(--green);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;">J</div>
+          <div>
+            <div class="testi-card__name">Josiane</div>
+            <div class="testi-card__retreat">Jornada Natur Yoga · Paraná</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__text">"O Yoga em meio à Natureza, o Reiki, o uso de florais e a caminhada na natureza são um match perfeito para promover bem-estar e autoconhecimento. Amei!"</p>
+        <div class="testi-card__footer">
+          <div class="testi-card__avatar" aria-label="Fabi" style="display:grid;place-items:center;background:var(--green);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;">F</div>
+          <div>
+            <div class="testi-card__name">Fabi</div>
+            <div class="testi-card__retreat">Yoga + Reiki + Florais · Paraná</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__text">"As Jornadas são simplesmente maravilhosas, revigorantes e restaurativas."</p>
+        <div class="testi-card__footer">
+          <div class="testi-card__avatar" aria-label="Jamile" style="display:grid;place-items:center;background:var(--green);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;">J</div>
+          <div>
+            <div class="testi-card__name">Jamile</div>
+            <div class="testi-card__retreat">Jornada Natur Yoga · Paraná</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga na natureza Paraná" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Jornada Morretes" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Buraco do Padre" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga em campos de camomila" /></div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq__head">
+      <span class="tag">Dúvidas comuns</span>
+      <h2 class="heading-lg">Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Somente mulheres podem participar das jornadas? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Sim. As nossas jornadas de yoga na natureza são só para mulheres, criando um ambiente de acolhimento, segurança e conexão.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Preciso ter experiência com yoga? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Não. As práticas são conduzidas de forma acolhedora e acessível, respeitando o ritmo de cada mulher.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Os roteiros incluem transporte? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Alguns roteiros incluem transporte de van saindo de Curitiba. Essa informação aparece na descrição de cada jornada.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Posso ir sozinha? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Sim. Muitas mulheres chegam sozinhas e encontram no grupo uma oportunidade de fazer novas amizades.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Como faço para reservar minha vaga? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Você pode clicar em "Reservar" na jornada desejada ou falar diretamente conosco pelo WhatsApp.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">O que está incluso nas experiências? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Depende de cada roteiro. As jornadas podem incluir yoga, práticas terapêuticas, gastronomia local, transporte, hospedagem ou vivências específicas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contato">
+  <div class="container">
+    <div class="final-cta__inner">
+      <span class="tag">Próxima jornada</span>
+      <h2 class="heading-lg">Vamos escolher sua <em>próxima jornada?</em></h2>
+      <p>Fale com a gente pelo WhatsApp e te ajudamos a encontrar a experiência certa para você.</p>
+      <a href="javascript:void(0)" onclick="openWhatsAppGeneral()" class="btn btn-gold final-cta__btn"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- RECONHECIMENTOS E SELOS -->
+<section class="seals-section" style="background:#fff;padding:64px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;">
+      <span class="tag" style="color:var(--gold);">Reconhecimentos e Selos</span>
+      <h2 class="heading-lg" style="color:var(--green);margin-top:12px;">Cuidado e qualidade <em>reconhecidos</em></h2>
+    </div>
+    <div class="seals-grid" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:56px;">
+      <div style="text-align:center;max-width:200px;">
+        <img src="Site%20Natur%20Yoga/Premio%20sebrae.JPG" alt="Prêmio SEBRAE Mulher de Negócios — Etapa Paraná" style="height:140px;width:auto;object-fit:contain;" />
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Prêmio SEBRAE<br>Mulher de Negócios</p>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:4px;">Etapa Paraná</p>
+      </div>
+      <div style="text-align:center;max-width:200px;">
+        <img src="Site%20Natur%20Yoga/seloviajantesmaisseguras.png" alt="Selo Viajantes Mais Seguras Paraná" style="height:140px;width:auto;object-fit:contain;" />
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Selo Viajantes<br>Mais Seguras</p>
+      </div>
+      <div style="text-align:center;max-width:200px;">
+        <img src="Site%20Natur%20Yoga/seloturismoresponsavel.png" alt="Selo Turismo Responsável" style="height:140px;width:auto;object-fit:contain;" />
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Selo Turismo<br>Responsável</p>
+      </div>
+      <div style="text-align:center;max-width:240px;">
+        <img src="Site%20Natur%20Yoga/cadastur.png" alt="Cadastur — Ministério do Turismo" style="height:90px;width:auto;object-fit:contain;margin-top:25px;" />
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Cadastur</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo-img" src="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png" alt="Natur Yoga" style="height:80px;width:auto;filter:brightness(0) invert(1);margin-bottom:0;" />
+        <p>A primeira agência de Ecoturismo e Autoconhecimento para mulheres do Paraná. Nascida em Campo Largo, com jornadas pelo Sul do Brasil.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/naturyoga.elas" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:naturyoga.elas@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+          <a href="javascript:void(0)" onclick="openWhatsAppGeneral()" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Jornadas</h4>
+        <ul>
+          <li><a href="#">Gastronomia &amp; Colheita</a></li>
+          <li><a href="#">Colheita de Flores</a></li>
+          <li><a href="#">Ecoturismo de Aventura</a></li>
+          <li><a href="#">Ecoturismo Contemplativo</a></li>
+          <li><a href="#">Experiências Manuais</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>A Natur Yoga</h4>
+        <ul>
+          <li><a href="#">Quem Somos</a></li>
+          <li><a href="#">Fundadoras</a></li>
+          <li><a href="#">Prêmios e Selos</a></li>
+          <li><a href="#">Depoimentos</a></li>
+          <li><a href="#">Turismo Regenerativo</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <div class="footer__contact">
+          <div class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Campo Largo, PR<br>Sul do Brasil</span></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="javascript:void(0)" onclick="openWhatsAppGeneral()" style="color:rgba(255,255,255,.65);font-size:.86rem;">(41) 99827-6398</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:naturyoga.elas@gmail.com" style="color:rgba(255,255,255,.65);font-size:.86rem;">naturyoga.elas@gmail.com</a></div>
+          <div class="footer__contact-item"><i class="fab fa-instagram"></i><a href="https://instagram.com/naturyoga.elas" target="_blank" rel="noopener" style="color:rgba(255,255,255,.65);font-size:.86rem;">@naturyoga.elas</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Natur Yoga · Campo Largo, Paraná · Todos os direitos reservados.</p>
+      <div class="footer__bottom-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Política de Cancelamento</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="javascript:void(0)" onclick="openWhatsAppGeneral()" class="wa-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+  /* WhatsApp integration */
+  const NATUR_WHATSAPP = "5541998276398";
+  function openWhatsApp(message) {
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${NATUR_WHATSAPP}?text=${encodedMessage}`, "_blank");
+  }
+  function openWhatsAppGeneral() {
+    openWhatsApp("Olá, Natur Yoga! Tenho interesse em viver uma experiência com vocês e gostaria de saber mais informações.");
+  }
+  function openWhatsAppRoteiro(nome) {
+    openWhatsApp(`Olá, Natur Yoga! Tenho interesse na experiência ${nome}. Gostaria de saber datas, valores e como reservar.`);
+  }
+
+  /* Navbar */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+  /* Hamburger menu */
+  const hamburger = document.querySelector('.navbar__hamburger');
+  const navLinks = document.querySelector('.navbar__links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
+    });
+  }
+
+  /* Reveal */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if(e.isIntersecting){ setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  /* Jornadas filter */
+  function filterJornadas(cat, btn) {
+    document.querySelectorAll('.jornadas__tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.jornada-card').forEach(card => {
+      if(cat === 'todas' || card.dataset.cat === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  /* Quiz */
+  const answers = { 1: null, 2: null, 3: null };
+  function selectOption(el) {
+    const q = el.dataset.q;
+    document.querySelectorAll(`.quiz__option[data-q="${q}"]`).forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[q] = el.dataset.v;
+    const nb = document.getElementById(`next${q}`);
+    if(nb) nb.style.display = 'inline-flex';
+  }
+  function nextQ(n) {
+    document.getElementById(`q${n-1}`).style.display = 'none';
+    document.getElementById(`q${n}`).style.display = 'block';
+    document.getElementById('quizProgress').style.width = Math.round((n/3)*100) + '%';
+    document.getElementById('quizStep').textContent = `Pergunta ${n} de 3`;
+  }
+  function prevQ(n) {
+    document.getElementById(`q${n+1}`).style.display = 'none';
+    document.getElementById(`q${n}`).style.display = 'block';
+    document.getElementById('quizProgress').style.width = Math.round((n/3)*100) + '%';
+    document.getElementById('quizStep').textContent = `Pergunta ${n} de 3`;
+  }
+  function showResult() {
+    const counts = {};
+    Object.values(answers).forEach(v => { if(v) counts[v] = (counts[v]||0)+1; });
+    const winner = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+    const results = {
+      colheita: { icon:'🌿', type:'Você é a Mulher da Terra', desc:'Sua jornada ideal é entre campos floridos, colheitas e sabores locais. Yoga + Colheita em Guajuvira, campos de camomila em Mandirituba ou lavanda em Araucária estão esperando por você com as braças abertas.' },
+      aventura: { icon:'⛰️', type:'Você é a Aventureira da Serra', desc:'Seu lugar é no topo do Morro do Cal com vista de 360° ou nos paredões do Cânion da Faxina. Trilhas, altitude e yoga ao amanhecer vão despertar uma vitalidade que você sempre soube que estava aí dentro.' },
+      contemp:  { icon:'🌊', type:'Você é a Mulher Contemplativa', desc:'O Santuário Nhundiaquara, o Buraco do Padre e os cenários dos Campos Gerais são o seu lugar. Yoga contemplativo, silêncio e a natureza paranaense vão te trazer de volta para si mesma.' }
+    };
+    const r = results[winner];
+    document.getElementById('resultIcon').textContent = r.icon;
+    document.getElementById('resultType').textContent = r.type;
+    document.getElementById('resultDesc').textContent = r.desc;
+    document.getElementById('quizQuestions').style.display = 'none';
+    document.getElementById('quizResult').classList.add('active');
+    document.querySelector('.quiz__progress').style.opacity = '0';
+  }
+  function resetQuiz() {
+    answers[1]=null; answers[2]=null; answers[3]=null;
+    document.querySelectorAll('.quiz__option').forEach(o => o.classList.remove('selected'));
+    document.querySelectorAll('#next1,#next2,#next3').forEach(b => b.style.display = 'none');
+    document.getElementById('quizResult').classList.remove('active');
+    document.getElementById('quizQuestions').style.display = 'block';
+    document.getElementById('q1').style.display = 'block';
+    document.getElementById('q2').style.display = 'none';
+    document.getElementById('q3').style.display = 'none';
+    document.getElementById('quizProgress').style.width = '33%';
+    document.getElementById('quizStep').textContent = 'Pergunta 1 de 3';
+    document.querySelector('.quiz__progress').style.opacity = '1';
+  }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq__item');
+    item.classList.toggle('open');
+  }
+
+  /* Bio Ler mais (mobile) */
+  function toggleBio(btn) {
+    const card = btn.closest('.founder-card__body') || btn.parentElement;
+    const bio = card.querySelector('.founder-card__bio');
+    if (!bio) return;
+    const expanded = bio.classList.toggle('collapsed') === false;
+    btn.textContent = expanded ? 'Ler menos' : 'Ler mais';
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
+
+  /* Generic Ler mais (mobile) */
+  function toggleReadmore(btn) {
+    const wrap = btn.closest('.readmore');
+    if (!wrap) return;
+    const expanded = wrap.classList.toggle('collapsed') === false;
+    btn.textContent = expanded ? 'Ler menos' : 'Ler mais';
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if(t){ e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
