@@ -67,7 +67,7 @@
     /* Hero */
     .hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; background:var(--green-d); }
     .hero__video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0; }
-    .hero__bg { position:absolute; inset:0; background-image:linear-gradient(90deg, rgba(0,45,38,.95) 0%, rgba(0,45,38,.75) 45%, rgba(0,45,38,.15) 100%), url('Site%20Natur%20Yoga/Fundadoras.jpg'); background-size:cover; background-repeat:no-repeat; background-position:75% center; z-index:0; }
+    .hero__bg { display:none; }
     .hero::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(0,45,38,.92) 0%, rgba(0,45,38,.74) 42%, rgba(0,45,38,.34) 100%); pointer-events:none; }
     .hero__content { position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:140px 24px 90px; text-align:left; width:100%; }
     .hero__inner { max-width:540px; }
@@ -399,10 +399,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="Site%20Natur%20Yoga/Fundadoras.jpg">
-    <source src="Site%20Natur%20Yoga/video/naturyogacapa-720.mp4" type="video/mp4" />
-  </video>
-  <div class="hero__bg" aria-hidden="true" style="display:none;"></div>
+  <img class="hero__video" src="Site%20Natur%20Yoga/Fundadoras.jpg" alt="Fundadoras da Natur Yoga em meio à natureza" fetchpriority="high" decoding="async" />
   <div class="hero__content">
     <div class="hero__inner">
     <div class="hero__eyebrow">
@@ -457,8 +454,8 @@
   <div class="container">
     <div class="about__grid">
       <div class="about__img-wrap reveal">
-        <img class="about__img-main" src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga com passeio de trem em Morretes, Serra do Mar" style="object-position:center;" />
-        <img class="about__img-accent" src="Site%20Natur%20Yoga/imersao-piramides-sagradas.jpg" alt="Louise e Fran nas Pirâmides Sagradas" style="object-position:center;" />
+        <img class="about__img-main" src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga com passeio de trem em Morretes, Serra do Mar" style="object-position:center;" loading="lazy" />
+        <img class="about__img-accent" src="Site%20Natur%20Yoga/imersao-piramides-sagradas.jpg" alt="Louise e Fran nas Pirâmides Sagradas" style="object-position:center;" loading="lazy" />
         <div class="about__badge">
           <div class="about__badge-num">800+</div>
           <div class="about__badge-text">Mulheres<br>Viajantes</div>
@@ -501,7 +498,7 @@
     </div>
     <div class="founders__grid">
       <div class="founder-card reveal">
-        <img class="founder-card__img" src="Site%20Natur%20Yoga/Louise%20Schroeder.JPG" alt="Louise Schroeder" style="object-position:top;" />
+        <img class="founder-card__img" src="Site%20Natur%20Yoga/Louise%20Schroeder.JPG" alt="Louise Schroeder" style="object-position:top;" loading="lazy" />
         <div class="founder-card__body">
           <div class="founder-card__name">Louise Schroeder</div>
           <div class="founder-card__role">Idealizadora · Professora de Yoga · Terapeuta Integrativa</div>
@@ -517,7 +514,7 @@
         </div>
       </div>
       <div class="founder-card reveal">
-        <img class="founder-card__img" src="Site%20Natur%20Yoga/Francieli.png" alt="Francieli Biernaski, co-fundadora da Natur Yoga, no Pico Paraná" style="object-position:center 20%;" />
+        <img class="founder-card__img" src="Site%20Natur%20Yoga/Francieli.jpg" alt="Francieli Biernaski, co-fundadora da Natur Yoga, no Pico Paraná" style="object-position:center 20%;" loading="lazy" />
         <div class="founder-card__body">
           <div class="founder-card__name">Francieli Biernaski</div>
           <div class="founder-card__role">Co-fundadora · Engenheira Agrônoma · Guia de Turismo</div>
@@ -559,7 +556,7 @@
       <!-- Gastronomia & Colheita -->
       <div class="jornada-card reveal" data-cat="colheita">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/guajuvira.jpg" alt="Yoga + Colheita em Guajuvira, Araucária" />
+          <img src="Site%20Natur%20Yoga/guajuvira.jpg" alt="Yoga + Colheita em Guajuvira, Araucária" loading="lazy" />
           <span class="jornada-card__badge badge-colheita">Gastronomia</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Araucária</span>
         </div>
@@ -581,7 +578,7 @@
 
       <div class="jornada-card reveal" data-cat="colheita">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Yoga%20%2B%20Colheita%20de%20Kiwi%20%26%20Mirtilos.jpg" alt="Yoga + Colheita de Mirtilos" />
+          <img src="Site%20Natur%20Yoga/kiwi-mirtilos.jpg" alt="Yoga + Colheita de Mirtilos" loading="lazy" />
           <span class="jornada-card__badge badge-colheita">Gastronomia</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Balsa Nova · 50km de Curitiba</span>
         </div>
@@ -602,7 +599,7 @@
 
       <div class="jornada-card reveal" data-cat="colheita">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Yoga%20%2B%20Gastronomia%20Polonesa.jpg" alt="Yoga + Gastronomia Polonesa" />
+          <img src="Site%20Natur%20Yoga/Yoga%20%2B%20Gastronomia%20Polonesa.jpg" alt="Yoga + Gastronomia Polonesa" loading="lazy" />
           <span class="jornada-card__badge badge-colheita">Gastronomia</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
         </div>
@@ -624,7 +621,7 @@
       <!-- Flores -->
       <div class="jornada-card reveal" data-cat="flores">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga + Campos de Camomila" />
+          <img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga + Campos de Camomila" loading="lazy" />
           <span class="jornada-card__badge" style="background:#a0785a;">Flores</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Mandirituba / São José dos Pinhais</span>
         </div>
@@ -644,7 +641,7 @@
 
       <div class="jornada-card reveal" data-cat="flores">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/lavanda.jpg" alt="Yoga em campo de lavanda, Recanto das Lavandas em Araucária" />
+          <img src="Site%20Natur%20Yoga/lavanda.jpg" alt="Yoga em campo de lavanda, Recanto das Lavandas em Araucária" loading="lazy" />
           <span class="jornada-card__badge" style="background:#7a5c9e;">Flores</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Araucária</span>
         </div>
@@ -666,7 +663,7 @@
       <!-- Aventura -->
       <div class="jornada-card reveal" data-cat="aventura">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga + Morro do Cal" />
+          <img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga + Morro do Cal" loading="lazy" />
           <span class="jornada-card__badge badge-aventura">Aventura</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo · 30min de Curitiba</span>
         </div>
@@ -687,7 +684,7 @@
 
       <div class="jornada-card reveal" data-cat="aventura">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Yoga%20Canion%20da%20Faxina.jpeg" alt="Yoga + Cânion da Faxina" style="image-orientation:from-image;" />
+          <img src="Site%20Natur%20Yoga/Yoga%20Canion%20da%20Faxina.jpeg" alt="Yoga + Cânion da Faxina" style="image-orientation:from-image;" loading="lazy" />
           <span class="jornada-card__badge badge-aventura">Aventura</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> São Luiz do Puruna</span>
         </div>
@@ -710,7 +707,7 @@
       <!-- Contemplativo -->
       <div class="jornada-card reveal" data-cat="contemp">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga + Trem para Morretes" />
+          <img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga + Trem para Morretes" loading="lazy" />
           <span class="jornada-card__badge badge-contemp">Contemplativo</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Morretes</span>
         </div>
@@ -733,7 +730,7 @@
 
       <div class="jornada-card reveal" data-cat="contemp">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Yoga + Buraco do Padre" />
+          <img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Yoga + Buraco do Padre" loading="lazy" />
           <span class="jornada-card__badge badge-contemp">Contemplativo</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Ponta Grossa</span>
         </div>
@@ -756,7 +753,7 @@
 
       <div class="jornada-card reveal" data-cat="contemp">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/imersao-piramides-sagradas.jpg" alt="Imersão Pirâmides Sagradas — Grão-Pará, SC" />
+          <img src="Site%20Natur%20Yoga/imersao-piramides-sagradas.jpg" alt="Imersão Pirâmides Sagradas — Grão-Pará, SC" loading="lazy" />
           <span class="jornada-card__badge badge-contemp">Imersão</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Grão-Pará, SC</span>
         </div>
@@ -781,7 +778,7 @@
       <!-- Manual -->
       <div class="jornada-card reveal" data-cat="manual">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica — Estúdio Boitatá" />
+          <img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica — Estúdio Boitatá" loading="lazy" />
           <span class="jornada-card__badge" style="background:#c0642a;">Manual</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
         </div>
@@ -803,7 +800,7 @@
 
       <div class="jornada-card reveal" data-cat="manual">
         <div class="jornada-card__img">
-          <img src="Site%20Natur%20Yoga/chaua.jpg" alt="Yoga e Plantio de Mudas Nativas no Viveiro Chauá" />
+          <img src="Site%20Natur%20Yoga/chaua.jpg" alt="Yoga e Plantio de Mudas Nativas no Viveiro Chauá" loading="lazy" />
           <span class="jornada-card__badge" style="background:#3a7d44;">Manual</span>
           <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
         </div>
@@ -1012,11 +1009,11 @@
 
 <!-- GALLERY -->
 <div class="gallery">
-  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga na natureza Paraná" /></div>
-  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Jornada Morretes" /></div>
-  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Buraco do Padre" /></div>
-  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica" /></div>
-  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga em campos de camomila" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga na natureza Paraná" loading="lazy" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Jornada Morretes" loading="lazy" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Buraco do Padre" loading="lazy" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica" loading="lazy" /></div>
+  <div class="gallery__item"><img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga em campos de camomila" loading="lazy" /></div>
 </div>
 
 <!-- FAQ -->
@@ -1076,20 +1073,20 @@
     </div>
     <div class="seals-grid" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:56px;">
       <div style="text-align:center;max-width:200px;">
-        <img src="Site%20Natur%20Yoga/Premio%20sebrae.JPG" alt="Prêmio SEBRAE Mulher de Negócios — Etapa Paraná" style="height:140px;width:auto;object-fit:contain;" />
+        <img src="Site%20Natur%20Yoga/Premio%20sebrae.JPG" alt="Prêmio SEBRAE Mulher de Negócios — Etapa Paraná" style="height:140px;width:auto;object-fit:contain;" loading="lazy" />
         <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Prêmio SEBRAE<br>Mulher de Negócios</p>
         <p style="font-size:.78rem;color:var(--muted);margin-top:4px;">Etapa Paraná</p>
       </div>
       <div style="text-align:center;max-width:200px;">
-        <img src="Site%20Natur%20Yoga/seloviajantesmaisseguras.png" alt="Selo Viajantes Mais Seguras Paraná" style="height:140px;width:auto;object-fit:contain;" />
+        <img src="Site%20Natur%20Yoga/seloviajantesmaisseguras.png" alt="Selo Viajantes Mais Seguras Paraná" style="height:140px;width:auto;object-fit:contain;" loading="lazy" />
         <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Selo Viajantes<br>Mais Seguras</p>
       </div>
       <div style="text-align:center;max-width:200px;">
-        <img src="Site%20Natur%20Yoga/seloturismoresponsavel.png" alt="Selo Turismo Responsável" style="height:140px;width:auto;object-fit:contain;" />
+        <img src="Site%20Natur%20Yoga/seloturismoresponsavel.png" alt="Selo Turismo Responsável" style="height:140px;width:auto;object-fit:contain;" loading="lazy" />
         <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Selo Turismo<br>Responsável</p>
       </div>
       <div style="text-align:center;max-width:240px;">
-        <img src="Site%20Natur%20Yoga/cadastur.png" alt="Cadastur — Ministério do Turismo" style="height:90px;width:auto;object-fit:contain;margin-top:25px;" />
+        <img src="Site%20Natur%20Yoga/cadastur.png" alt="Cadastur — Ministério do Turismo" style="height:90px;width:auto;object-fit:contain;margin-top:25px;" loading="lazy" />
         <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Cadastur</p>
       </div>
     </div>
@@ -1101,7 +1098,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img class="footer__logo-img" src="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png" alt="Natur Yoga" style="height:80px;width:auto;filter:brightness(0) invert(1);margin-bottom:0;" />
+        <img class="footer__logo-img" src="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png" alt="Natur Yoga" style="height:80px;width:auto;filter:brightness(0) invert(1);margin-bottom:0;" loading="lazy" />
         <p>A primeira agência de Ecoturismo e Autoconhecimento para mulheres do Paraná. Nascida em Campo Largo, com jornadas pelo Sul do Brasil.</p>
         <div class="footer__social">
           <a href="https://instagram.com/naturyoga.elas" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
