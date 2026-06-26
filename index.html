@@ -1,16 +1,1004 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Natur Yoga</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natur Yoga | Retiros de Yoga para Mulheres no Paraná</title>
+  <meta name="description" content="Jornadas e imersões de yoga na natureza, só para mulheres, em Curitiba e no Paraná. Yoga restaurativo, terapias integrativas e ecoturismo consciente." />
+  <link rel="canonical" href="https://naturyoga.com.br/" />
+  <meta property="og:title" content="Natur Yoga | Retiros de Yoga para Mulheres no Paraná" />
+  <meta property="og:description" content="Jornadas e imersões de yoga na natureza, só para mulheres, em Curitiba e no Paraná." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://naturyoga.com.br/" />
+  <meta property="og:image" content="https://naturyoga.com.br/Site%20Natur%20Yoga/Fundadoras.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Natur Yoga",
+  "description": "Agência de ecoturismo e autoconhecimento para mulheres, com jornadas e imersões de yoga na natureza no Paraná e Sul do Brasil.",
+  "url": "https://naturyoga.com.br/",
+  "image": "https://naturyoga.com.br/Site%20Natur%20Yoga/Fundadoras.jpg",
+  "logo": "https://naturyoga.com.br/Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png",
+  "telephone": "+55-41-99827-6398",
+  "email": "naturyoga.elas@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Campo Largo",
+    "addressRegion": "PR",
+    "addressCountry": "BR"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Curitiba"
+    },
+    {
+      "@type": "State",
+      "name": "Paraná"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/naturyoga.elas"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Somente mulheres podem participar das jornadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. As nossas jornadas de yoga na natureza são só para mulheres, criando um ambiente de acolhimento, segurança e conexão."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso ter experiência com yoga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. As práticas são conduzidas de forma acolhedora e acessível, respeitando o ritmo de cada mulher."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os roteiros incluem transporte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alguns roteiros incluem transporte de van saindo de Curitiba. Essa informação aparece na descrição de cada jornada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso ir sozinha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Muitas mulheres chegam sozinhas e encontram no grupo uma oportunidade de fazer novas amizades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como faço para reservar minha vaga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você pode clicar em \"Reservar\" na jornada desejada ou falar diretamente conosco pelo WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que está incluso nas experiências?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cada roteiro. As jornadas podem incluir yoga, práticas terapêuticas, gastronomia local, transporte, hospedagem ou vivências específicas."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#" class="navbar__logo" style="display:flex;align-items:center;gap:10px;">
+      <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.webp" /><img src="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png" alt="Natur Yoga" style="height:64px;width:auto;border-radius:8px;display:block;" class="navbar__logo-img" width="500" height="500" /></picture>
+    </a>
+    <ul class="navbar__links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#jornadas">Jornadas</a></li>
+      <li><a href="#como-funciona">Como Funciona</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#depoimentos">O que elas dizem</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="javascript:void(0)" onclick="openWhatsAppGeneral()" class="btn btn-gold navbar__cta">Reservar Experiência</a>
+      <button class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero__video" src="Site%20Natur%20Yoga/Fundadoras.jpg" alt="Fundadoras da Natur Yoga em meio à natureza" fetchpriority="high" decoding="async" />
+  <div class="hero__content">
+    <div class="hero__inner">
+    <div class="hero__eyebrow">
+      <i class="fas fa-leaf"></i>
+      Ecoturismo e Autoconhecimento para mulheres
+    </div>
+    <h1 class="hero__headline">Turismo e Yoga<br><em>na natureza.</em></h1>
+    <p class="hero__sub">
+      Jornadas e imersões só para mulheres, no Sul do Brasil.
+    </p>
+    <div class="hero__actions">
+      <a href="#jornadas" class="btn btn-gold"><i class="fas fa-compass"></i>Ver Jornadas</a>
+      <a href="#quiz" class="btn btn-white"><i class="fas fa-sparkles"></i>Descobrir Minha Viagem</a>
+    </div>
+    </div>
+  </div>
+  <div class="hero__scroll"><span>Desacelere</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="intro-strip">
+  <div class="intro-strip__track">
+    <div class="intro-strip__item"><i class="fas fa-venus"></i> 800+ mulheres viajantes</div>
+    <div class="intro-strip__item"><i class="fas fa-compass"></i> 5 anos guiando jornadas</div>
+    <div class="intro-strip__item"><i class="fas fa-map-marker-alt"></i> 12+ destinos no Brasil</div>
+    <div class="intro-strip__item"><i class="fas fa-venus"></i> 800+ mulheres viajantes</div>
+    <div class="intro-strip__item"><i class="fas fa-compass"></i> 5 anos guiando jornadas</div>
+    <div class="intro-strip__item"><i class="fas fa-map-marker-alt"></i> 12+ destinos no Brasil</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__img-wrap reveal">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.webp" /><img class="about__img-main" src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga com passeio de trem em Morretes, Serra do Mar" style="object-position:center;" loading="lazy" width="1800" height="1200" /></picture>
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/imersao-piramides-sagradas.webp" /><img class="about__img-accent" src="Site%20Natur%20Yoga/imersao-piramides-sagradas.jpg" alt="Louise e Fran nas Pirâmides Sagradas" style="object-position:center;" loading="lazy" width="1350" height="1800" /></picture>
+        <div class="about__badge">
+          <div class="about__badge-num">800+</div>
+          <div class="about__badge-text">Mulheres<br>Viajantes</div>
+        </div>
+      </div>
+      <div class="about__text reveal">
+        <span class="tag">Sobre</span>
+        <h2 class="heading-lg">De mulher para mulher, <em>em conexão com a natureza.</em></h2>
+        <p class="subtext" style="margin-top:16px;">
+          A Natur Yoga nasceu em Campo Largo, no Sul do Brasil, criando experiências de yoga e ecoturismo pensadas exclusivamente para mulheres em meio à natureza.
+        </p>
+        <p class="subtext" style="margin-top:14px;font-style:italic;color:var(--green-d);">
+          Um convite para desacelerar, respirar e voltar a se sentir presente.
+        </p>
+        <div class="about__features">
+          <div class="about__feature">
+            <div class="about__feature-icon"><i class="fas fa-venus"></i></div>
+            <div><h4>Só para mulheres</h4><p>Jornadas criadas para mulheres que desejam pausar, respirar e viver momentos de conexão na natureza.</p></div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div><h4>Curadoria dos roteiros</h4><p>Cada roteiro é escolhido com cuidado, considerando a natureza, o ritmo do grupo e a experiência como um todo.</p></div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon"><i class="fas fa-seedling"></i></div>
+            <div><h4>Turismo regenerativo</h4><p>Buscamos cuidar do meio ambiente e movimentar a economia local em cada experiência.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders" id="fundadoras">
+  <div class="container">
+    <div class="founders__header reveal">
+      <span class="tag">As Fundadoras</span>
+      <h2 class="heading-xl">De mulher <em>para mulher</em></h2>
+    </div>
+    <div class="founders__grid">
+      <div class="founder-card reveal">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Louise%20Schroeder.webp" /><img class="founder-card__img" src="Site%20Natur%20Yoga/Louise%20Schroeder.JPG" alt="Louise Schroeder" style="object-position:top;" loading="lazy" width="1350" height="1800" /></picture>
+        <div class="founder-card__body">
+          <div class="founder-card__name">Louise Schroeder</div>
+          <div class="founder-card__role">Idealizadora · Professora de Yoga · Terapeuta Integrativa</div>
+          <p class="founder-card__bio collapsed">
+            <span class="bio__short">O Yoga se revelou para mim como um caminho profundo e amoroso, trazendo-me de volta ao presente e à minha essência.</span><span class="bio__rest"><br><br>Com quase 10 anos de prática, me especializei também em Yoga Restaurativo e mergulhei nas práticas contemplativas e Terapias Integrativas como Reiki, Aromaterapia e oráculos.<br><br>Para mim, o Yoga é mais do que uma prática — é um estilo de vida que vivo intensamente. Estou aqui para compartilhar essa jornada com você, oferecendo experiências que conectam corpo, mente e alma, sempre em harmonia com a natureza.</span>
+          </p>
+          <button type="button" class="bio__toggle mobile-only" onclick="toggleBio(this)" aria-expanded="false">Ler mais</button>
+          <div class="founder-card__tags">
+            <span class="founder-card__tag">Praticante há 10 anos</span>
+            <span class="founder-card__tag">Instrutora desde 2019</span>
+            <span class="founder-card__tag">Terapeuta Integrativa</span>
+          </div>
+        </div>
+      </div>
+      <div class="founder-card reveal">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Francieli.webp" /><img class="founder-card__img" src="Site%20Natur%20Yoga/Francieli.jpg" alt="Francieli Biernaski, co-fundadora da Natur Yoga, no Pico Paraná" style="object-position:center 20%;" loading="lazy" width="1120" height="1400" /></picture>
+        <div class="founder-card__body">
+          <div class="founder-card__name">Francieli Biernaski</div>
+          <div class="founder-card__role">Co-fundadora · Engenheira Agrônoma · Guia de Turismo</div>
+          <p class="founder-card__bio collapsed">
+            <span class="bio__short">Sou a Fran, Engenheira Agrônoma e Guia de Turismo. Sempre tive uma relação muito próxima com a natureza, trilhas, acampamentos e estar ao ar livre fazem parte da minha vida.</span><span class="bio__rest"><br><br>Na Natur Yoga, eu cuido dos roteiros e da organização de cada jornada. Gosto de pensar em tudo com calma: escolher bem os lugares, entender o ritmo do grupo e garantir que cada experiência aconteça com segurança e leveza.<br><br>Acredito muito que viajar pode ser um jeito simples de se reconectar, com a natureza, com o corpo e também com outras mulheres que estão vivendo o mesmo momento que você.</span>
+          </p>
+          <button type="button" class="bio__toggle mobile-only" onclick="toggleBio(this)" aria-expanded="false">Ler mais</button>
+          <div class="founder-card__tags">
+            <span class="founder-card__tag">Engenharia Agronômica</span>
+            <span class="founder-card__tag">Guia de Turismo</span>
+            <span class="founder-card__tag">Trilhas</span>
+            <span class="founder-card__tag">Ecoturismo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JORNADAS -->
+<section class="section" id="jornadas">
+  <div class="container">
+    <div class="jornadas__header reveal">
+      <span class="tag">Nossas jornadas de yoga na natureza</span>
+      <h2 class="heading-xl">Viaje no <em>ritmo da sua alma</em></h2>
+    </div>
+
+    <div class="jornadas__tabs" id="tabsContainer">
+      <button class="jornadas__tab active" onclick="filterJornadas('todas', this)">Todas</button>
+      <button class="jornadas__tab" onclick="filterJornadas('colheita', this)">Gastronomia &amp; Colheita</button>
+      <button class="jornadas__tab" onclick="filterJornadas('flores', this)">Colheita de Flores</button>
+      <button class="jornadas__tab" onclick="filterJornadas('aventura', this)">Aventura</button>
+      <button class="jornadas__tab" onclick="filterJornadas('contemp', this)">Contemplativo</button>
+      <button class="jornadas__tab" onclick="filterJornadas('manual', this)">Experiência Manual</button>
+    </div>
+
+    <div class="jornadas__grid" id="jornadasGrid">
+
+      <!-- Gastronomia & Colheita -->
+      <div class="jornada-card reveal" data-cat="colheita">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/guajuvira.webp" /><img src="Site%20Natur%20Yoga/guajuvira.jpg" alt="Yoga + Colheita em Guajuvira, Araucária" loading="lazy" width="1200" height="1800" /></picture>
+          <span class="jornada-card__badge badge-colheita">Gastronomia</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Araucária</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-colheita-guajuvira-araucaria">Yoga + Colheita em Guajuvira</a></h3>
+          <p class="jornada-card__desc">Colheita de morangos e uvas, prática de yoga no campo com café colonial de herança polonesa e ucraniana.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Morangos</span>
+            <span class="jornada-card__tag">Uvas</span>
+            <span class="jornada-card__tag">Café Colonial</span>
+            <span class="jornada-card__tag">Cultura Polonesa</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Datas pontuais</strong>Araucária</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="colheita">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/kiwi-mirtilos.webp" /><img src="Site%20Natur%20Yoga/kiwi-mirtilos.jpg" alt="Yoga + Colheita de Mirtilos" loading="lazy" width="1090" height="660" /></picture>
+          <span class="jornada-card__badge badge-colheita">Gastronomia</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Balsa Nova · 50km de Curitiba</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-colheita-mirtilos-balsa-nova">Yoga + Colheita de Mirtilos</a></h3>
+          <p class="jornada-card__desc">Chácara em São Luiz do Puruna. Tour guiado pelo pomar, colheita participativa de mirtilos e yoga em meio à paisagem serrana. Uma jornada no ritmo da terra, com tempo para colher, respirar e estar presente.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Mirtilos</span>
+            <span class="jornada-card__tag">Degustação</span>
+            <span class="jornada-card__tag">Yoga ao Ar Livre</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Mar–Mai e Set–Nov</strong>Colheita</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="colheita">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20%2B%20Gastronomia%20Polonesa.webp" /><img src="Site%20Natur%20Yoga/Yoga%20%2B%20Gastronomia%20Polonesa.jpg" alt="Yoga + Gastronomia Polonesa" loading="lazy" width="1350" height="1800" /></picture>
+          <span class="jornada-card__badge badge-colheita">Gastronomia</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-gastronomia-polonesa-campo-largo">Yoga + Gastronomia Polonesa</a></h3>
+          <p class="jornada-card__desc">Campo Ila, Colônia Figueiredo, Campo Largo. Café da colônia ao ar livre, receitas polonesas tradicionais e yoga em meio à natureza da região, valorizando os sabores e a história local.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Culinária Polonesa</span>
+            <span class="jornada-card__tag">Café Colonial</span>
+            <span class="jornada-card__tag">Campo Largo</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Colônia Figueiredo</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flores -->
+      <div class="jornada-card reveal" data-cat="flores">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Campos%20de%20Camomila.webp" /><img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga + Campos de Camomila" loading="lazy" width="1800" height="1200" /></picture>
+          <span class="jornada-card__badge" style="background:#a0785a;">Flores</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Mandirituba / São José dos Pinhais</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-campos-camomila-mandirituba">Yoga + Campos de Camomila</a></h3>
+          <p class="jornada-card__desc">Campos de camomila entre Mandirituba e São José dos Pinhais. Circuito Caminho das Camomilas e gastronomia local. O aroma suave da flor acompanha a prática de yoga entre os campos, em uma experiência de tranquilidade e presença.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Caminho das Camomilas</span>
+            <span class="jornada-card__tag">Gastronomia Local</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ago–Set</strong>Florada máxima</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="flores">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/lavanda.webp" /><img src="Site%20Natur%20Yoga/lavanda.jpg" alt="Yoga em campo de lavanda, Recanto das Lavandas em Araucária" loading="lazy" width="1800" height="1200" /></picture>
+          <span class="jornada-card__badge" style="background:#7a5c9e;">Flores</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Araucária</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-campos-lavanda-araucaria">Yoga + Campos de Lavanda</a></h3>
+          <p class="jornada-card__desc">Recanto das Lavandas, Araucária. Trilha em bosque de araucárias nativas e yoga entre os campos em florada. O aroma da lavanda acompanha a prática ao ar livre, trazendo leveza e relaxamento.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Lavanda</span>
+            <span class="jornada-card__tag">Araucárias</span>
+            <span class="jornada-card__tag">Yoga ao Ar Livre</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Nov–Jan</strong>Florada principal</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aventura -->
+      <div class="jornada-card reveal" data-cat="aventura">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Morro%20do%20Cal.webp" /><img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga + Morro do Cal" loading="lazy" width="1688" height="1800" /></picture>
+          <span class="jornada-card__badge badge-aventura">Aventura</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo · 30min de Curitiba</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-morro-do-cal-campo-largo">Yoga + Morro do Cal</a></h3>
+          <p class="jornada-card__desc">1.120 m de altitude, trilha de nível iniciante. No cume, vista de toda a região metropolitana de Curitiba. Yoga ao pôr do sol, com a luz dourada da tarde sobre o vale.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">1.120m altitude</span>
+            <span class="jornada-card__tag">Vista 360°</span>
+            <span class="jornada-card__tag">Nível Iniciante</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Temporada de montanhas</strong>Abr–Set</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="aventura">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20Canion%20da%20Faxina.webp" /><img src="Site%20Natur%20Yoga/Yoga%20Canion%20da%20Faxina.jpeg" alt="Yoga + Cânion da Faxina" style="image-orientation:from-image;" loading="lazy" width="1800" height="1350" /></picture>
+          <span class="jornada-card__badge badge-aventura">Aventura</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> São Luiz do Puruna</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-canion-da-faxina-puruna">Yoga + Cânion da Faxina</a></h3>
+          <p class="jornada-card__desc">Paredões da Escarpa Devoniana, com trilha de trechos íngremes e mirantes sobre o vale. Yoga em meio à paisagem rochosa, com tempo para silêncio e contemplação. Temporada de montanhas (abril a setembro).</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Cânion</span>
+            <span class="jornada-card__tag">Mirantes</span>
+            <span class="jornada-card__tag">Escarpa Devoniana</span>
+            <span class="jornada-card__tag">Nível Médio</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Temporada de montanhas</strong>Abr–Set</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contemplativo -->
+      <div class="jornada-card reveal" data-cat="contemp">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.webp" /><img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Yoga + Trem para Morretes" loading="lazy" width="1800" height="1200" /></picture>
+          <span class="jornada-card__badge badge-contemp">Contemplativo</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Morretes</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-trem-morretes-serra-do-mar">Yoga + Trem para Morretes</a></h3>
+          <p class="jornada-card__desc">Yoga em meio à Mata Atlântica, cercada pelo som do rio e pela natureza da Serra do Mar. Passeio de trem pela Serra do Mar, yoga no Santuário Nhundiaquara e gastronomia regional em Morretes.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Serra do Mar</span>
+            <span class="jornada-card__tag">Mata Atlântica</span>
+            <span class="jornada-card__tag">Santuário Nhundiaquara</span>
+            <span class="jornada-card__tag">Gastronomia</span>
+            <span class="jornada-card__tag"><i class="fas fa-shuttle-van"></i> Transporte de van</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Morretes, PR</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="contemp">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.webp" /><img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Yoga + Buraco do Padre" loading="lazy" width="1350" height="1800" /></picture>
+          <span class="jornada-card__badge badge-contemp">Contemplativo</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Ponta Grossa</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-buraco-do-padre-ponta-grossa">Yoga + Buraco do Padre</a></h3>
+          <p class="jornada-card__desc">Yoga no jardim do parque, cercada pela natureza característica dos Campos Gerais. Buraco do Padre: formações rochosas, furnas e cachoeira dentro de caverna.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Furnas</span>
+            <span class="jornada-card__tag">Cachoeira</span>
+            <span class="jornada-card__tag">Contemplativo</span>
+            <span class="jornada-card__tag">Campos Gerais</span>
+            <span class="jornada-card__tag"><i class="fas fa-shuttle-van"></i> Transporte de van</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Ponta Grossa, PR</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="contemp">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/imersao-piramides-sagradas.webp" /><img src="Site%20Natur%20Yoga/imersao-piramides-sagradas.jpg" alt="Imersão Pirâmides Sagradas — Grão-Pará, SC" loading="lazy" width="1350" height="1800" /></picture>
+          <span class="jornada-card__badge badge-contemp">Imersão</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Grão-Pará, SC</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/imersao-piramides-sagradas">Imersão Pirâmides Sagradas</a></h3>
+          <p class="jornada-card__desc">Imersão de dois dias na Pousada das Pirâmides, em Grão-Pará, Santa Catarina. Yoga, práticas terapêuticas, hospedagem, gastronomia local e tempo para contemplar as formações montanhosas da Serra Furada.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">2 dias</span>
+            <span class="jornada-card__tag">Hospedagem</span>
+            <span class="jornada-card__tag">Yoga</span>
+            <span class="jornada-card__tag">Práticas terapêuticas</span>
+            <span class="jornada-card__tag">Gastronomia local</span>
+            <span class="jornada-card__tag"><i class="fas fa-shuttle-van"></i> Transporte de van</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Datas pontuais</strong>Serra Furada, SC</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manual -->
+      <div class="jornada-card reveal" data-cat="manual">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20com%20ceramica.webp" /><img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica — Estúdio Boitatá" loading="lazy" width="1350" height="1800" /></picture>
+          <span class="jornada-card__badge" style="background:#c0642a;">Manual</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-ceramica-estudio-boitata">Yoga e Cerâmica | Estúdio Boitatá</a></h3>
+          <p class="jornada-card__desc">Ateliê autoral na Colônia Figueiredo, fundado por Danielle Carazzai e Rodrigo Ramirez. Modelagem em argila e yoga, dois caminhos manuais que convidam à presença e ao ritmo lento.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Cerâmica</span>
+            <span class="jornada-card__tag">Arte Manual</span>
+            <span class="jornada-card__tag">Argila</span>
+            <span class="jornada-card__tag">Campo Largo</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Colônia Figueiredo</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="jornada-card reveal" data-cat="manual">
+        <div class="jornada-card__img">
+          <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/chaua.webp" /><img src="Site%20Natur%20Yoga/chaua.jpg" alt="Yoga e Plantio de Mudas Nativas no Viveiro Chauá" loading="lazy" width="1200" height="1800" /></picture>
+          <span class="jornada-card__badge" style="background:#3a7d44;">Manual</span>
+          <span class="jornada-card__loc"><i class="fas fa-map-marker-alt"></i> Campo Largo</span>
+        </div>
+        <div class="jornada-card__body">
+          <h3 class="jornada-card__title"><a href="/jornadas/yoga-plantio-mudas-nativas-chaua">Yoga e Plantio de Mudas Nativas | Sociedade Chauá</a></h3>
+          <p class="jornada-card__desc">Viveiro Chauá, referência em conservação da Floresta com Araucária: cerca de 70 mil mudas/ano de mais de 200 espécies nativas. Plantio participativo combinado com yoga contemplativo — turismo regenerativo na prática.</p>
+          <div class="jornada-card__tags">
+            <span class="jornada-card__tag">Araucária</span>
+            <span class="jornada-card__tag">70k mudas/ano</span>
+            <span class="jornada-card__tag">Conservação</span>
+            <span class="jornada-card__tag">200+ espécies</span>
+          </div>
+          <div class="jornada-card__footer">
+            <div class="jornada-card__season"><strong>Ano inteiro</strong>Viveiro Chauá, PR</div>
+            <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(this.closest('.jornada-card').querySelector('.jornada-card__title').textContent.trim())" class="btn btn-gold" style="padding:10px 20px;font-size:.82rem;">Reservar <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODALIDADES -->
+<section class="modalidades">
+  <div class="container">
+    <div class="modalidades__header reveal">
+      <span class="tag">Práticas &amp; Terapias</span>
+      <h2 class="heading-lg">Práticas para <em>corpo e mente</em></h2>
+      <p class="subtext" style="margin-top:24px;text-align:center;color:#fff;max-width:680px;margin-left:auto;margin-right:auto;">Cada jornada combina diferentes práticas para nutrir corpo, mente e emoções.</p>
+    </div>
+    <div class="modalidades__grid reveal">
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-spa"></i></div>
+        <div class="modalidade-card__title">Hatha Yoga</div>
+        <div class="modalidade-card__desc">Uma prática com posturas, respiração e permanência, conduzida em um ritmo tranquilo para preparar o corpo e trazer presença.</div>
+      </div>
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-wind"></i></div>
+        <div class="modalidade-card__title">Vinyasa Flow</div>
+        <div class="modalidade-card__desc">Uma prática mais fluida, em que movimento e respiração caminham juntos, criando uma sequência leve, consciente e energizante.</div>
+      </div>
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-moon"></i></div>
+        <div class="modalidade-card__title">Yoga Restaurativo</div>
+        <div class="modalidade-card__desc">Uma prática suave e acolhedora, com posturas confortáveis e tempo para o corpo relaxar profundamente.</div>
+      </div>
+      <div class="modalidade-card">
+        <div class="modalidade-card__icon"><i class="fas fa-leaf"></i></div>
+        <div class="modalidade-card__title">Meditação na Natureza</div>
+        <div class="modalidade-card__desc">Práticas guiadas ao ar livre para respirar melhor, observar a paisagem, silenciar por alguns instantes e voltar ao momento presente.</div>
+      </div>
+    </div>
+    <div class="modalidades__header reveal" style="margin-top:64px;">
+      <h3 class="heading-lg" style="font-size:1.8rem;">Práticas <em>terapêuticas</em></h3>
+    </div>
+    <div class="terapias__grid reveal">
+      <div class="terapia-card">
+        <div class="terapia-card__icon" style="font-size:1.6rem;color:var(--gold-l);margin-bottom:12px;"><i class="fas fa-hands"></i></div>
+        <div class="terapia-card__title">Reiki Coletivo</div>
+        <div class="terapia-card__desc">Para energizar e promover bem-estar.</div>
+      </div>
+      <div class="terapia-card">
+        <div class="terapia-card__icon" style="font-size:1.6rem;color:var(--gold-l);margin-bottom:12px;"><i class="fas fa-clone"></i></div>
+        <div class="terapia-card__title">Cartas Terapêuticas</div>
+        <div class="terapia-card__desc">Para uma jornada de reflexão e crescimento.</div>
+      </div>
+      <div class="terapia-card">
+        <div class="terapia-card__icon" style="font-size:1.6rem;color:var(--gold-l);margin-bottom:12px;"><i class="fas fa-seedling"></i></div>
+        <div class="terapia-card__title">Aromaterapia</div>
+        <div class="terapia-card__desc">Para nutrir o corpo, equilibrar as emoções e florescer em harmonia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="how__header reveal">
+      <span class="tag">Processo Simples</span>
+      <h2 class="heading-xl">Como <em>funciona</em></h2>
+      <p class="subtext">Acompanhamos você em cada etapa, da primeira mensagem até a sua volta para casa.</p>
+    </div>
+    <div class="how__steps reveal">
+      <div class="how__step">
+        <div class="how__step-num">1</div>
+        <h3>Descubra Sua Jornada</h3>
+        <p>Faça nosso quiz e encontre o circuito que ressoa com o que você mais precisa. Cada jornada é única: colheita, flores, aventura, contemplação ou experiência manual.</p>
+      </div>
+      <div class="how__arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="how__step">
+        <div class="how__step-num">2</div>
+        <h3>Reserve Sua Vaga</h3>
+        <p>Grupos pequenos e exclusivos para mulheres. Após a reserva, você recebe um guia de preparação e suporte direto com Louise ou Fran. Reservas conforme disponibilidade de cada roteiro.</p>
+      </div>
+      <div class="how__arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="how__step">
+        <div class="how__step-num">3</div>
+        <h3>Viva a Sua Jornada Interior</h3>
+        <p>Yoga, terapias integrativas, natureza e a companhia de mulheres que estão no mesmo caminho que o seu. Volte para casa com mais de você mesma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+  <div class="container quiz__inner">
+    <div class="quiz__header reveal">
+      <span class="tag">Autoconhecimento</span>
+      <h2 class="heading-lg">Que tipo de aventureira <em>você é?</em></h2>
+      <p>3 perguntas rápidas para encontrar a jornada Natur Yoga feita para você.</p>
+    </div>
+    <div class="quiz__card reveal" id="quizCard">
+      <div class="quiz__progress">
+        <div class="quiz__progress-bar"><div class="quiz__progress-fill" id="quizProgress" style="width:33%"></div></div>
+        <span class="quiz__progress-text" id="quizStep">Pergunta 1 de 3</span>
+      </div>
+      <div id="quizQuestions">
+        <div class="quiz__q" id="q1">
+          <p class="quiz__question">Como você gosta de passar um dia ao ar livre?</p>
+          <div class="quiz__options">
+            <div class="quiz__option" data-q="1" data-v="colheita" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Colher frutas, provar sabores novos e sentar em um café colonial ao ar livre</span></div>
+            <div class="quiz__option" data-q="1" data-v="aventura" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Subir uma trilha íngreme e chegar em um mirante com vista de 360°</span></div>
+            <div class="quiz__option" data-q="1" data-v="contemp" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Meditar em silêncio à beira de uma cachoeira ou entre formações rochosas</span></div>
+          </div>
+          <div class="quiz__actions"><span></span><button class="btn btn-gold" onclick="nextQ(2)" id="next1" style="display:none">Próxima <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+        <div class="quiz__q" id="q2" style="display:none">
+          <p class="quiz__question">Qual dessas experiências mais combina com você?</p>
+          <div class="quiz__options">
+            <div class="quiz__option" data-q="2" data-v="colheita" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Yoga entre campos de lavanda ou camomila com cheiro de flor no ar</span></div>
+            <div class="quiz__option" data-q="2" data-v="aventura" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Yoga no topo do Morro do Cal ao pôr do sol</span></div>
+            <div class="quiz__option" data-q="2" data-v="contemp" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Passeio de trem pela Serra do Mar e yoga no Santuário Nhundiaquara</span></div>
+          </div>
+          <div class="quiz__actions"><button class="quiz__back" onclick="prevQ(1)"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-gold" onclick="nextQ(3)" id="next2" style="display:none">Próxima <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+        <div class="quiz__q" id="q3" style="display:none">
+          <p class="quiz__question">O que você quer carregar na mochila de volta para casa?</p>
+          <div class="quiz__options">
+            <div class="quiz__option" data-q="3" data-v="colheita" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Uma nova relação com a comida, a terra e o ritmo das estações</span></div>
+            <div class="quiz__option" data-q="3" data-v="aventura" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>A sensação de poder no corpo e coragem para os próximos desafios</span></div>
+            <div class="quiz__option" data-q="3" data-v="contemp" onclick="selectOption(this)"><div class="quiz__option-dot"></div><span>Clareza mental, equilíbrio e reconexão com o meu propósito de vida</span></div>
+          </div>
+          <div class="quiz__actions"><button class="quiz__back" onclick="prevQ(2)"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-gold" onclick="showResult()" id="next3" style="display:none">Ver Resultado <i class="fas fa-sparkles"></i></button></div>
+        </div>
+      </div>
+      <div class="quiz__result" id="quizResult">
+        <div class="quiz__result-icon" id="resultIcon">🌿</div>
+        <h3 class="quiz__result-type" id="resultType">Você é a Aventureira da Terra</h3>
+        <p class="quiz__result-desc" id="resultDesc">Sua jornada ideal está esperando por você na Natur Yoga.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="javascript:void(0)" onclick="openWhatsAppRoteiro(document.getElementById('resultType').textContent || 'Quiz Natur Yoga')" class="btn btn-gold">Reservar Esta Jornada</a>
+          <button class="btn" style="background:rgba(255,255,255,.15);color:white;border:1.5px solid rgba(255,255,255,.3);" onclick="resetQuiz()">Refazer Quiz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section--alt" id="depoimentos">
+  <div class="container">
+    <div class="testimonials__header reveal">
+      <span class="tag">Das Nossas Aventureiras</span>
+      <h2 class="heading-xl">O que dizem as mulheres <em>que viveram</em></h2>
+    </div>
+    <div class="testimonials__grid">
+      <div class="testi-card reveal">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__text">"A Jornada foi tão intensa e incrível que estou assimilando ainda. Agradeço por cada momento de sabedoria, troca e carinho."</p>
+        <div class="testi-card__footer">
+          <div class="testi-card__avatar" aria-label="Josiane" style="display:grid;place-items:center;background:var(--green);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;">J</div>
+          <div>
+            <div class="testi-card__name">Josiane</div>
+            <div class="testi-card__retreat">Jornada Natur Yoga · Paraná</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__text">"O Yoga em meio à Natureza, o Reiki, o uso de florais e a caminhada na natureza são um match perfeito para promover bem-estar e autoconhecimento. Amei!"</p>
+        <div class="testi-card__footer">
+          <div class="testi-card__avatar" aria-label="Fabi" style="display:grid;place-items:center;background:var(--green);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;">F</div>
+          <div>
+            <div class="testi-card__name">Fabi</div>
+            <div class="testi-card__retreat">Yoga + Reiki + Florais · Paraná</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__text">"As Jornadas são simplesmente maravilhosas, revigorantes e restaurativas."</p>
+        <div class="testi-card__footer">
+          <div class="testi-card__avatar" aria-label="Jamile" style="display:grid;place-items:center;background:var(--green);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;">J</div>
+          <div>
+            <div class="testi-card__name">Jamile</div>
+            <div class="testi-card__retreat">Jornada Natur Yoga · Paraná</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="gallery__item"><picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Morro%20do%20Cal.webp" /><img src="Site%20Natur%20Yoga/Morro%20do%20Cal.jpg" alt="Yoga na natureza Paraná" loading="lazy" width="1688" height="1800" /></picture></div>
+  <div class="gallery__item"><picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.webp" /><img src="Site%20Natur%20Yoga/Yoga%20com%20Passeio%20de%20Trem%20Morretes.JPG" alt="Jornada Morretes" loading="lazy" width="1800" height="1200" /></picture></div>
+  <div class="gallery__item"><picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.webp" /><img src="Site%20Natur%20Yoga/Yoga%20no%20Buraco%20do%20Padre.JPG" alt="Buraco do Padre" loading="lazy" width="1350" height="1800" /></picture></div>
+  <div class="gallery__item"><picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Yoga%20com%20ceramica.webp" /><img src="Site%20Natur%20Yoga/Yoga%20com%20ceramica.jpg" alt="Yoga e Cerâmica" loading="lazy" width="1350" height="1800" /></picture></div>
+  <div class="gallery__item"><picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Campos%20de%20Camomila.webp" /><img src="Site%20Natur%20Yoga/Campos%20de%20Camomila.jpg" alt="Yoga em campos de camomila" loading="lazy" width="1800" height="1200" /></picture></div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq__head">
+      <span class="tag">Dúvidas comuns</span>
+      <h2 class="heading-lg">Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Somente mulheres podem participar das jornadas? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Sim. As nossas jornadas de yoga na natureza são só para mulheres, criando um ambiente de acolhimento, segurança e conexão.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Preciso ter experiência com yoga? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Não. As práticas são conduzidas de forma acolhedora e acessível, respeitando o ritmo de cada mulher.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Os roteiros incluem transporte? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Alguns roteiros incluem transporte de van saindo de Curitiba. Essa informação aparece na descrição de cada jornada.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Posso ir sozinha? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Sim. Muitas mulheres chegam sozinhas e encontram no grupo uma oportunidade de fazer novas amizades.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">Como faço para reservar minha vaga? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Você pode clicar em "Reservar" na jornada desejada ou falar diretamente conosco pelo WhatsApp.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" onclick="toggleFaq(this)">O que está incluso nas experiências? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq__a"><p>Depende de cada roteiro. As jornadas podem incluir yoga, práticas terapêuticas, gastronomia local, transporte, hospedagem ou vivências específicas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contato">
+  <div class="container">
+    <div class="final-cta__inner">
+      <span class="tag">Próxima jornada</span>
+      <h2 class="heading-lg">Vamos escolher sua <em>próxima jornada?</em></h2>
+      <p>Fale com a gente pelo WhatsApp e te ajudamos a encontrar a experiência certa para você.</p>
+      <a href="javascript:void(0)" onclick="openWhatsAppGeneral()" class="btn btn-gold final-cta__btn"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- RECONHECIMENTOS E SELOS -->
+<section class="seals-section" style="background:#fff;padding:64px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;">
+      <span class="tag" style="color:var(--gold);">Reconhecimentos e Selos</span>
+      <h2 class="heading-lg" style="color:var(--green);margin-top:12px;">Cuidado e qualidade <em>reconhecidos</em></h2>
+    </div>
+    <div class="seals-grid" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:56px;">
+      <div style="text-align:center;max-width:200px;">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Premio%20sebrae.webp" /><img src="Site%20Natur%20Yoga/Premio%20sebrae.JPG" alt="Prêmio SEBRAE Mulher de Negócios — Etapa Paraná" style="height:140px;width:auto;object-fit:contain;" loading="lazy" width="1350" height="1800" /></picture>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Prêmio SEBRAE<br>Mulher de Negócios</p>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:4px;">Etapa Paraná</p>
+      </div>
+      <div style="text-align:center;max-width:200px;">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/seloviajantesmaisseguras.webp" /><img src="Site%20Natur%20Yoga/seloviajantesmaisseguras.png" alt="Selo Viajantes Mais Seguras Paraná" style="height:140px;width:auto;object-fit:contain;" loading="lazy" width="3508" height="2481" /></picture>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Selo Viajantes<br>Mais Seguras</p>
+      </div>
+      <div style="text-align:center;max-width:200px;">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/seloturismoresponsavel.webp" /><img src="Site%20Natur%20Yoga/seloturismoresponsavel.png" alt="Selo Turismo Responsável" style="height:140px;width:auto;object-fit:contain;" loading="lazy" width="506" height="416" /></picture>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Selo Turismo<br>Responsável</p>
+      </div>
+      <div style="text-align:center;max-width:240px;">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/cadastur.webp" /><img src="Site%20Natur%20Yoga/cadastur.png" alt="Cadastur — Ministério do Turismo" style="height:90px;width:auto;object-fit:contain;margin-top:25px;" loading="lazy" width="2100" height="335" /></picture>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--text);font-weight:500;">Cadastur</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <picture><source type="image/webp" srcset="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.webp" /><img class="footer__logo-img" src="Site%20Natur%20Yoga/Logo%20Natur%20Yoga%20Laranja.png" alt="Natur Yoga" style="height:80px;width:auto;filter:brightness(0) invert(1);margin-bottom:0;" loading="lazy" width="500" height="500" /></picture>
+        <p>A primeira agência de Ecoturismo e Autoconhecimento para mulheres do Paraná. Nascida em Campo Largo, com jornadas pelo Sul do Brasil.</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/naturyoga.elas" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:naturyoga.elas@gmail.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+          <a href="javascript:void(0)" onclick="openWhatsAppGeneral()" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Jornadas</h4>
+        <ul>
+          <li><a href="#">Gastronomia &amp; Colheita</a></li>
+          <li><a href="#">Colheita de Flores</a></li>
+          <li><a href="#">Ecoturismo de Aventura</a></li>
+          <li><a href="#">Ecoturismo Contemplativo</a></li>
+          <li><a href="#">Experiências Manuais</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>A Natur Yoga</h4>
+        <ul>
+          <li><a href="#">Quem Somos</a></li>
+          <li><a href="#">Fundadoras</a></li>
+          <li><a href="#">Prêmios e Selos</a></li>
+          <li><a href="#">Depoimentos</a></li>
+          <li><a href="#">Turismo Regenerativo</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <div class="footer__contact">
+          <div class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Campo Largo, PR<br>Sul do Brasil</span></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="javascript:void(0)" onclick="openWhatsAppGeneral()" style="color:rgba(255,255,255,.65);font-size:.86rem;">(41) 99827-6398</a></div>
+          <div class="footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:naturyoga.elas@gmail.com" style="color:rgba(255,255,255,.65);font-size:.86rem;">naturyoga.elas@gmail.com</a></div>
+          <div class="footer__contact-item"><i class="fab fa-instagram"></i><a href="https://instagram.com/naturyoga.elas" target="_blank" rel="noopener" style="color:rgba(255,255,255,.65);font-size:.86rem;">@naturyoga.elas</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Natur Yoga · Campo Largo, Paraná · Todos os direitos reservados.</p>
+      <div class="footer__bottom-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Política de Cancelamento</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="javascript:void(0)" onclick="openWhatsAppGeneral()" class="wa-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
 <script>
-window.location.href = "natur-yoga-redesign.html";
+  /* WhatsApp integration */
+  const NATUR_WHATSAPP = "5541998276398";
+  function openWhatsApp(message) {
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${NATUR_WHATSAPP}?text=${encodedMessage}`, "_blank");
+  }
+  function openWhatsAppGeneral() {
+    openWhatsApp("Olá, Natur Yoga! Tenho interesse em viver uma experiência com vocês e gostaria de saber mais informações.");
+  }
+  function openWhatsAppRoteiro(nome) {
+    openWhatsApp(`Olá, Natur Yoga! Tenho interesse na experiência ${nome}. Gostaria de saber datas, valores e como reservar.`);
+  }
+
+  /* Navbar */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+  /* Hamburger menu */
+  const hamburger = document.querySelector('.navbar__hamburger');
+  const navLinks = document.querySelector('.navbar__links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
+    });
+  }
+
+  /* Reveal */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if(e.isIntersecting){ setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  /* Jornadas filter */
+  function filterJornadas(cat, btn) {
+    document.querySelectorAll('.jornadas__tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.jornada-card').forEach(card => {
+      if(cat === 'todas' || card.dataset.cat === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  /* Quiz */
+  const answers = { 1: null, 2: null, 3: null };
+  function selectOption(el) {
+    const q = el.dataset.q;
+    document.querySelectorAll(`.quiz__option[data-q="${q}"]`).forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[q] = el.dataset.v;
+    const nb = document.getElementById(`next${q}`);
+    if(nb) nb.style.display = 'inline-flex';
+  }
+  function nextQ(n) {
+    document.getElementById(`q${n-1}`).style.display = 'none';
+    document.getElementById(`q${n}`).style.display = 'block';
+    document.getElementById('quizProgress').style.width = Math.round((n/3)*100) + '%';
+    document.getElementById('quizStep').textContent = `Pergunta ${n} de 3`;
+  }
+  function prevQ(n) {
+    document.getElementById(`q${n+1}`).style.display = 'none';
+    document.getElementById(`q${n}`).style.display = 'block';
+    document.getElementById('quizProgress').style.width = Math.round((n/3)*100) + '%';
+    document.getElementById('quizStep').textContent = `Pergunta ${n} de 3`;
+  }
+  function showResult() {
+    const counts = {};
+    Object.values(answers).forEach(v => { if(v) counts[v] = (counts[v]||0)+1; });
+    const winner = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+    const results = {
+      colheita: { icon:'🌿', type:'Você é a Mulher da Terra', desc:'Sua jornada ideal é entre campos floridos, colheitas e sabores locais. Yoga + Colheita em Guajuvira, campos de camomila em Mandirituba ou lavanda em Araucária estão esperando por você com as braças abertas.' },
+      aventura: { icon:'⛰️', type:'Você é a Aventureira da Serra', desc:'Seu lugar é no topo do Morro do Cal com vista de 360° ou nos paredões do Cânion da Faxina. Trilhas, altitude e yoga ao amanhecer vão despertar uma vitalidade que você sempre soube que estava aí dentro.' },
+      contemp:  { icon:'🌊', type:'Você é a Mulher Contemplativa', desc:'O Santuário Nhundiaquara, o Buraco do Padre e os cenários dos Campos Gerais são o seu lugar. Yoga contemplativo, silêncio e a natureza paranaense vão te trazer de volta para si mesma.' }
+    };
+    const r = results[winner];
+    document.getElementById('resultIcon').textContent = r.icon;
+    document.getElementById('resultType').textContent = r.type;
+    document.getElementById('resultDesc').textContent = r.desc;
+    document.getElementById('quizQuestions').style.display = 'none';
+    document.getElementById('quizResult').classList.add('active');
+    document.querySelector('.quiz__progress').style.opacity = '0';
+  }
+  function resetQuiz() {
+    answers[1]=null; answers[2]=null; answers[3]=null;
+    document.querySelectorAll('.quiz__option').forEach(o => o.classList.remove('selected'));
+    document.querySelectorAll('#next1,#next2,#next3').forEach(b => b.style.display = 'none');
+    document.getElementById('quizResult').classList.remove('active');
+    document.getElementById('quizQuestions').style.display = 'block';
+    document.getElementById('q1').style.display = 'block';
+    document.getElementById('q2').style.display = 'none';
+    document.getElementById('q3').style.display = 'none';
+    document.getElementById('quizProgress').style.width = '33%';
+    document.getElementById('quizStep').textContent = 'Pergunta 1 de 3';
+    document.querySelector('.quiz__progress').style.opacity = '1';
+  }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq__item');
+    item.classList.toggle('open');
+  }
+
+  /* Bio Ler mais (mobile) */
+  function toggleBio(btn) {
+    const card = btn.closest('.founder-card__body') || btn.parentElement;
+    const bio = card.querySelector('.founder-card__bio');
+    if (!bio) return;
+    const expanded = bio.classList.toggle('collapsed') === false;
+    btn.textContent = expanded ? 'Ler menos' : 'Ler mais';
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
+
+  /* Generic Ler mais (mobile) */
+  function toggleReadmore(btn) {
+    const wrap = btn.closest('.readmore');
+    if (!wrap) return;
+    const expanded = wrap.classList.toggle('collapsed') === false;
+    btn.textContent = expanded ? 'Ler menos' : 'Ler mais';
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if(t){ e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth' }); }
+    });
+  });
 </script>
-
-<p>Se não redirecionar, <a href="natur-yoga-redesign.html">clique aqui</a>.</p>
-
 </body>
 </html>
